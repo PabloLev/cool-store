@@ -13,7 +13,7 @@ function Navbar() {
 					</div>
 					{/* <!-- NAVIGATION MENU --> */}
 					<ul className="nav-links">
-						<input className="menu-ckeckbox" type="checkbox" id="checkbox_toggle" checked />
+						<input className="menu-ckeckbox" type="checkbox" id="checkbox_toggle" />
 						<label htmlFor="checkbox_toggle" className="hamburger">
 							&#9776;
 						</label>
