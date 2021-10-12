@@ -5,6 +5,8 @@ function App() {
 	return (
 		<main className="App">
 			<img src={promotional} alt="" />
+			<img src={promotional} alt="" />
+			<img src={promotional} alt="" />
 		</main>
 	);
 }

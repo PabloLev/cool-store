@@ -13,12 +13,10 @@ function Navbar() {
 					</div>
 					{/* <!-- NAVIGATION MENU --> */}
 					<ul className="nav-links">
-						{/* <!-- USING CHECKBOX HACK --> */}
-						<input type="checkbox" id="checkbox_toggle" />
+						<input className="menu-ckeckbox" type="checkbox" id="checkbox_toggle" checked />
 						<label htmlFor="checkbox_toggle" className="hamburger">
 							&#9776;
 						</label>
-						{/* <!-- NAVIGATION MENUS --> */}
 						<div className="menu">
 							<li className="nav-item">
 								<a className="active" href="/#">

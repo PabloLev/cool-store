@@ -1,9 +1,10 @@
+import './Header.scss';
 import HeadingBar from '../HeadingBar/HeadingBar';
 import Navbar from '../Navbar/Navbar';
 
 function Header() {
 	return (
-		<header className="App-header">
+		<header className="header">
 			<HeadingBar />
 			<Navbar />
 		</header>

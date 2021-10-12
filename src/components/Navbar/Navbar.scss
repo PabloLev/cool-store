@@ -9,6 +9,7 @@
 	padding: 2rem 0;
 	background-color: $white;
 	border-bottom: 1px solid $light;
+
 	.navbar-container {
 		display: flex;
 		align-items: center;
@@ -29,6 +30,9 @@
 			}
 			.nav-links {
 				height: 100%;
+				.menu-ckeckbox {
+					display: none;
+				}
 				.hamburger {
 					display: none;
 					font-size: 24px;
@@ -90,7 +94,7 @@
 /*RESPONSIVE NAVBAR MENU STARTS*/
 /* CHECKBOX HACK */
 input[type='checkbox'] {
-	display: none;
+	// display: none;
 }
 
 /* APPLYING MEDIA QUERIES */
@@ -105,6 +109,8 @@ input[type='checkbox'] {
 				.logo {
 				}
 				.nav-links {
+					.menu-ckeckbox {
+					}
 					.hamburger {
 						display: block;
 						cursor: pointer;
@@ -114,10 +120,6 @@ input[type='checkbox'] {
 							background-color: $light;
 							margin-top: 2.5rem;
 							position: absolute;
-							right: 0;
-							left: 0;
-							text-align: center;
-							padding: 16px 0;
 						}
 					}
 					.menu {
@@ -159,18 +161,27 @@ input[type='checkbox'] {
 		}
 	}
 
-	input[type='checkbox']:checked ~ .menu {
-		display: flex;
-		flex-direction: column;
-		background-color: $light;
-		margin-top: 2.5rem;
-		position: absolute;
-		right: 0;
-		left: 0;
-		text-align: center;
-		padding: 16px 0;
-	}
-	input:checked ~ .menu {
-		background-color: red;
+	// input[type='checkbox']:checked ~ .menu {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	background-color: $light;
+	// 	margin-top: 2.5rem;
+	// 	position: absolute;
+	// 	right: 0;
+	// 	left: 0;
+	// 	text-align: center;
+	// 	padding: 16px 0;
+	// }
+	.menu-ckeckbox:checked ~ .menu {
+		// background-color: red;
+		// display: flex;
+		// flex-direction: column;
+		// background-color: $light;
+		// margin-top: 2.5rem;
+		// position: absolute;
+		// right: 0;
+		// left: 0;
+		// text-align: center;
+		// padding: 16px 0;
 	}
 }
