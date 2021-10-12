@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/cool-store/static/css/main.93fbf751.chunk.css",
-    "main.js": "/cool-store/static/js/main.2378c501.chunk.js",
-    "main.js.map": "/cool-store/static/js/main.2378c501.chunk.js.map",
-    "runtime-main.js": "/cool-store/static/js/runtime-main.11233906.js",
-    "runtime-main.js.map": "/cool-store/static/js/runtime-main.11233906.js.map",
-    "static/js/2.ae3260d0.chunk.js": "/cool-store/static/js/2.ae3260d0.chunk.js",
-    "static/js/2.ae3260d0.chunk.js.map": "/cool-store/static/js/2.ae3260d0.chunk.js.map",
-    "static/js/3.4ae8fbfa.chunk.js": "/cool-store/static/js/3.4ae8fbfa.chunk.js",
-    "static/js/3.4ae8fbfa.chunk.js.map": "/cool-store/static/js/3.4ae8fbfa.chunk.js.map",
+    "main.css": "/cool-store/static/css/main.d2130242.chunk.css",
+    "main.js": "/cool-store/static/js/main.58975f91.chunk.js",
+    "main.js.map": "/cool-store/static/js/main.58975f91.chunk.js.map",
+    "runtime-main.js": "/cool-store/static/js/runtime-main.4700765d.js",
+    "runtime-main.js.map": "/cool-store/static/js/runtime-main.4700765d.js.map",
+    "static/js/2.93433c0a.chunk.js": "/cool-store/static/js/2.93433c0a.chunk.js",
+    "static/js/2.93433c0a.chunk.js.map": "/cool-store/static/js/2.93433c0a.chunk.js.map",
+    "static/js/3.6e5de108.chunk.js": "/cool-store/static/js/3.6e5de108.chunk.js",
+    "static/js/3.6e5de108.chunk.js.map": "/cool-store/static/js/3.6e5de108.chunk.js.map",
     "index.html": "/cool-store/index.html",
-    "static/css/main.93fbf751.chunk.css.map": "/cool-store/static/css/main.93fbf751.chunk.css.map",
-    "static/js/2.ae3260d0.chunk.js.LICENSE.txt": "/cool-store/static/js/2.ae3260d0.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/cool-store/static/media/logo.6ce24c58.svg"
+    "static/css/main.d2130242.chunk.css.map": "/cool-store/static/css/main.d2130242.chunk.css.map",
+    "static/js/2.93433c0a.chunk.js.LICENSE.txt": "/cool-store/static/js/2.93433c0a.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/cool-store/static/media/icon-user.fbc0951e.svg",
+    "static/media/promotional.9212af45.jpg": "/cool-store/static/media/promotional.9212af45.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.11233906.js",
-    "static/js/2.ae3260d0.chunk.js",
-    "static/css/main.93fbf751.chunk.css",
-    "static/js/main.2378c501.chunk.js"
+    "static/js/runtime-main.4700765d.js",
+    "static/js/2.93433c0a.chunk.js",
+    "static/css/main.d2130242.chunk.css",
+    "static/js/main.58975f91.chunk.js"
   ]
 }
