@@ -11,10 +11,10 @@ function HeadingBar() {
 					<span className="heading-info-text">(12345)67890</span>
 				</div>
 				<nav className="heading-nav">
-					{/* <input type="checkbox" id="checkbox_toggle" />
-					<label htmlFor="checkbox_toggle" className="hamburger">
+					<input className="headingbar-ckeckbox" type="checkbox" id="headingbar_toggle" />
+					<label className="headingbar-hamburger" htmlFor="headingbar_toggle">
 						&#9776;
-					</label> */}
+					</label>
 					<ul className="heading-navbar">
 						<li className="heading-navbar-item">
 							<a className="navbar-link me-2" aria-current="page" href="/#">

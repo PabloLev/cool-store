@@ -28,6 +28,14 @@
 		}
 		.heading-nav {
 			display: flex;
+			.headingbar-ckeckbox {
+				display: none;
+			}
+			.headingbar-hamburger {
+				display: none;
+				font-size: 24px;
+				user-select: none;
+			}
 			.heading-navbar {
 				display: flex;
 				justify-content: center;
@@ -73,8 +81,6 @@
 						&:active {
 						}
 						&:hover {
-							// display: block;
-							// background-color: #4c9e9e;
 						}
 					}
 					&:hover .heading-dropdown {
@@ -90,47 +96,66 @@
 }
 
 /*RESPONSIVE NAVBAR MENU STARTS*/
-/* CHECKBOX HACK */
-input[type='checkbox'] {
-	// display: none;
-}
-/*HAMBURGER MENU*/
-.hamburger {
-	// display: none;
-	font-size: 24px;
-	user-select: none;
-}
 /* APPLYING MEDIA QUERIES */
-// @media (max-width: 768px) {
-// 	.menu {
-// 		display: none;
-// 		position: absolute;
-// 		background-color: teal;
-// 		right: 0;
-// 		left: 0;
-// 		text-align: center;
-// 		padding: 16px 0;
-// 	}
-// 	.menu li:hover {
-// 		display: inline-block;
-// 		background-color: #4c9e9e;
-// 		transition: 0.3s ease;
-// 	}
-// 	.menu li + li {
-// 		margin-top: 12px;
-// 	}
-// 	input[type='checkbox']:checked ~ .menu {
-// 		display: block;
-// 	}
-// 	.hamburger {
-// 		display: block;
-// 	}
-// 	.dropdown {
-// 		left: 50%;
-// 		top: 30px;
-// 		transform: translateX(35%);
-// 	}
-// 	.dropdown li:hover {
-// 		background-color: #4c9e9e;
-// 	}
-// }
+@media (max-width: 768px) {
+	.heading-bar {
+		.heading-container {
+			min-width: 100%;
+			padding: 0 2rem;
+			.heading-info {
+				.heading-info-text {
+				}
+			}
+			.heading-nav {
+				.headingbar-ckeckbox {
+					&:checked ~ .heading-navbar {
+						display: flex;
+						flex-direction: column;
+						background-color: $violet;
+						margin-top: 2.5rem;
+						position: absolute;
+					}
+				}
+				.headingbar-hamburger {
+					display: inherit;
+					color: $white;
+				}
+				.heading-navbar {
+					display: none;
+					position: absolute;
+					right: 0;
+					left: 0;
+					text-align: center;
+					padding: 0;
+					.heading-navbar-item {
+						padding: 3rem 0;
+						.navbar-link {
+						}
+						.heading-dropdown {
+							margin-left: 250%;
+							background-color: $light-violet;
+							margin-top: 0;
+							padding-top: 0;
+							li + li {
+							}
+							li {
+								a {
+									&:hover {
+									}
+								}
+							}
+							&:active {
+							}
+							&:hover {
+							}
+						}
+						&:hover .heading-dropdown {
+						}
+						&:active .heading-dropdown {
+						}
+					}
+				}
+			}
+		}
+	}
+}
