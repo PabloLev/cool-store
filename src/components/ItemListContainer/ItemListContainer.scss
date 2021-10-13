@@ -1,0 +1,28 @@
+@import '../../scss/variables.scss';
+.itemListContainer {
+	display: grid;
+	justify-content: center;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 63%;
+	margin: 5rem auto;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 1366px) {
+	.itemListContainer {
+		grid-template-columns: 1fr 1fr 1fr;
+		width: 80%;
+	}
+}
+@media (max-width: 1024px) {
+	.itemListContainer {
+		grid-template-columns: 1fr 1fr;
+		width: 90%;
+	}
+}
+@media (max-width: 768px) {
+	.itemListContainer {
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
+}

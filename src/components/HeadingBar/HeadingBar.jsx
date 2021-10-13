@@ -1,3 +1,4 @@
+import CartWidget from '../CartWidget/CartWidget';
 import './HeadingBar.scss';
 
 function HeadingBar() {
@@ -6,14 +7,14 @@ function HeadingBar() {
 			<div className="heading-container">
 				<div className="heading-info">
 					<i className="icon-email"></i>
-					<span className="heading-info-text">mhhasanul@gmail.com</span>
+					<span className="heading-info-text">info@hekto.com</span>
 					<i className="icon-phone"></i>
 					<span className="heading-info-text">(12345)67890</span>
 				</div>
 				<nav className="heading-nav">
 					<input className="headingbar-ckeckbox" type="checkbox" id="headingbar_toggle" />
 					<label className="headingbar-hamburger" htmlFor="headingbar_toggle">
-						&#9776;
+						<i className="icon-chevron-down ms-1"></i>
 					</label>
 					<ul className="heading-navbar">
 						<li className="heading-navbar-item">
@@ -57,8 +58,8 @@ function HeadingBar() {
 								<i className="icon-hart ms-1"></i>
 							</a>
 						</li>
-						<i className="icon-cart ms-3 pointer"></i>
 					</ul>
+					<CartWidget />
 				</nav>
 			</div>
 		</div>

@@ -1,13 +1,18 @@
 import './scss/App.scss';
-import promotional from './assets/img/promotional.jpg';
+
+import Header from './components/Header/Header';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Hero from './components/Hero/Hero';
 
 function App() {
 	return (
-		<main className="App">
-			<img src={promotional} alt="" />
-			<img src={promotional} alt="" />
-			<img src={promotional} alt="" />
-		</main>
+		<>
+			<Header />
+			<Hero />
+			<main className="main-container">
+				<ItemListContainer />
+			</main>
+		</>
 	);
 }
 

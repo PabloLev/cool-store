@@ -17,10 +17,12 @@
 		display: flex;
 		justify-content: space-between;
 		min-width: 63%;
+		height: 100%;
 		.heading-info {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			height: 100%;
 			.heading-info-text {
 				padding: 0 5rem 0 1rem;
 				color: $light;
@@ -41,6 +43,7 @@
 				justify-content: center;
 				align-items: center;
 				align-content: center;
+
 				.heading-navbar-item {
 					display: flex;
 					flex-wrap: nowrap;
@@ -58,12 +61,15 @@
 					}
 					.heading-dropdown {
 						background-color: $violet;
-						padding: 3em 0 1rem;
+						padding: 0;
 						position: absolute;
-						display: none;
+						// display: none;
+						opacity: 0;
 						border-radius: 0.5rem;
+						height: 0;
 						top: -1rem;
-						z-index: 0;
+						z-index: 800;
+						transition: all 0.3s;
 						li + li {
 							margin-top: 1rem;
 						}
@@ -74,7 +80,7 @@
 							a {
 								color: $white;
 								&:hover {
-									color: $light-violet;
+									color: $primary;
 								}
 							}
 						}
@@ -84,10 +90,16 @@
 						}
 					}
 					&:hover .heading-dropdown {
-						display: block;
+						// display: block;
+						opacity: 1;
+						padding: 3em 0 1rem;
+						height: auto;
 					}
 					&:active .heading-dropdown {
-						display: block;
+						// display: block;
+						opacity: 1;
+						padding: 3em 0 1rem;
+						height: auto;
 					}
 				}
 			}
@@ -99,11 +111,14 @@
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 768px) {
 	.heading-bar {
+		height: 3.4rem;
 		.heading-container {
 			min-width: 100%;
-			padding: 0 2rem;
+			padding: 0 1rem;
 			.heading-info {
 				.heading-info-text {
+					font-size: 1.2rem;
+					padding: 0 2rem 0 0.5rem;
 				}
 			}
 			.heading-nav {
@@ -112,12 +127,13 @@
 						display: flex;
 						flex-direction: column;
 						background-color: $violet;
-						margin-top: 2.5rem;
+						margin-top: 3rem;
 						position: absolute;
 					}
 				}
 				.headingbar-hamburger {
-					display: inherit;
+					display: flex;
+					align-items: center;
 					color: $white;
 				}
 				.heading-navbar {
@@ -127,15 +143,27 @@
 					left: 0;
 					text-align: center;
 					padding: 0;
+					height: auto;
+					z-index: 99999;
 					.heading-navbar-item {
-						padding: 3rem 0;
+						width: 100%;
+						padding: 2rem 0;
+						flex-wrap: wrap;
+
 						.navbar-link {
 						}
 						.heading-dropdown {
-							margin-left: 250%;
+							// margin-left: 250%;
+
+							position: relative;
+							width: 100%;
 							background-color: $light-violet;
 							margin-top: 0;
-							padding-top: 0;
+							// padding-top: 1rem;
+							z-index: 900;
+
+							top: 0;
+							border-radius: 0;
 							li + li {
 							}
 							li {
@@ -150,8 +178,12 @@
 							}
 						}
 						&:hover .heading-dropdown {
+							padding-top: 1rem;
+							margin-top: 2rem;
 						}
 						&:active .heading-dropdown {
+							padding-top: 1rem;
+							margin-top: 2rem;
 						}
 					}
 				}

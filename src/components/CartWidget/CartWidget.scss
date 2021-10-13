@@ -1,0 +1,16 @@
+@import '../../scss/variables.scss';
+
+.cartWidget {
+	display: flex;
+	align-items: center;
+	height: 100%;
+
+	.icon-cart {
+		height: 2rem;
+		width: 2rem;
+	}
+	.cartWidget-number {
+		font-family: 'Lato', sans-serif;
+		min-width: 2rem;
+	}
+}
