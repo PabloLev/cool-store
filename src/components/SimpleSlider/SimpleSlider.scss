@@ -1,0 +1,42 @@
+@import '../../scss/variables.scss';
+
+.slick-slider {
+	.slick-arrow {
+	}
+	.slick-prev {
+	}
+	.slick-next {
+	}
+	.slick-list {
+		.slick-track {
+			.slick-slide {
+			}
+		}
+	}
+	.slick-dots {
+		button {
+			&:before {
+				content: '';
+				height: 1rem;
+				width: 1rem;
+				background-color: transparent;
+				border: 1px solid $primary;
+				transform: rotateZ(45deg);
+				opacity: 1;
+			}
+		}
+		.slick-active {
+			button {
+				&:before {
+					content: '';
+					height: 1rem;
+					width: 1rem;
+					background-color: $primary;
+					border: 1px solid $primary;
+
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

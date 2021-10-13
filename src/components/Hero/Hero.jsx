@@ -1,10 +1,10 @@
-import promotional from '../../assets/img/promotional.jpg';
 import './Hero.scss';
+import SimpleSlider from '../SimpleSlider/SimpleSlider';
 
 function Hero() {
 	return (
 		<div className="hero">
-			<img src={promotional} alt="" />
+			<SimpleSlider />
 		</div>
 	);
 }

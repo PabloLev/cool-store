@@ -24,12 +24,6 @@ function Navbar() {
 								</a>
 							</li>
 							<li className="nav-item">
-								<a href="/#">Pages</a>
-							</li>
-							<li className="nav-item">
-								<a href="/#">Products</a>
-							</li>
-							<li className="nav-item">
 								<a href="/#">Shop</a>
 							</li>
 							<li className="nav-item">
@@ -37,14 +31,14 @@ function Navbar() {
 							</li>
 						</div>
 					</ul>
-				</div>
-				<div className="search-container">
-					<form className="search" action="/action_page.php">
-						<input className="search-input" type="text" placeholder="" name="search" />
-						<button className="search-btn" type="submit">
-							<i className="icon-search"></i>
-						</button>
-					</form>
+					<div className="search-container">
+						<form className="search" action="/action_page.php">
+							<input className="search-input" type="text" placeholder="" name="search" />
+							<button className="search-btn" type="submit">
+								<i className="icon-search"></i>
+							</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</nav>
