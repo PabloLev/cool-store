@@ -190,31 +190,24 @@ i {
 	display: inline-block;
 	height: 1.6rem;
 	width: 1.6rem;
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 .icon-email {
-	// background-image: url('../assets/icons/icon-mail.svg');
 	background-color: $white;
 	mask: url('../assets/icons/icon-mail.svg') no-repeat center center;
 }
 .icon-phone {
-	// background-image: url('../assets/icons/icon-phone.svg');
 	background-color: $white;
 	mask: url('../assets/icons/icon-phone.svg') no-repeat center center;
 }
 .icon-chevron-down {
-	// background-image: url('../assets/icons/icon-chevron-down.svg');
 	background-color: $white;
 	mask: url('../assets/icons/icon-chevron-down.svg') no-repeat center center;
 }
 .icon-user {
-	// background-image: url('../assets/icons/icon-user.svg');
 	background-color: $white;
 	mask: url('../assets/icons/icon-user.svg') no-repeat center center;
 }
 .icon-hart {
-	// background-image: url('../assets/icons/icon-hart.svg');
 	background-color: $white;
 	mask: url('../assets/icons/icon-hart.svg') no-repeat center center;
 }

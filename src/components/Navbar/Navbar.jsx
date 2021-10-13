@@ -31,14 +31,14 @@ function Navbar() {
 							</li>
 						</div>
 					</ul>
-					<div className="search-container">
-						<form className="search" action="/action_page.php">
-							<input className="search-input" type="text" placeholder="" name="search" />
-							<button className="search-btn" type="submit">
-								<i className="icon-search"></i>
-							</button>
-						</form>
-					</div>
+				</div>
+				<div className="search-container">
+					<form className="search" action="/action_page.php">
+						<input className="search-input" type="text" placeholder="" name="search" />
+						<button className="search-btn" type="submit">
+							<i className="icon-search"></i>
+						</button>
+					</form>
 				</div>
 			</div>
 		</nav>
