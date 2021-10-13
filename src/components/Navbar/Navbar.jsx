@@ -36,7 +36,8 @@ function Navbar() {
 					<form className="search" action="/action_page.php">
 						<input className="search-input" type="text" placeholder="" name="search" />
 						<button className="search-btn" type="submit">
-							<i className="icon-search"></i>
+							{/* <i className="icon-search"></i> */}
+							<i className="icon-icon-search"></i>
 						</button>
 					</form>
 				</div>

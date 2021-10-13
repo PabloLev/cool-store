@@ -58,6 +58,9 @@
 				.icon-hart {
 					background-color: $text1;
 				}
+				i {
+					color: $text1;
+				}
 			}
 		}
 	}
@@ -71,6 +74,7 @@
 		margin-bottom: 0.8rem;
 	}
 	.color-icons {
+		display: flex;
 		margin-bottom: 1.5rem;
 		.icon-color {
 			height: 1rem;

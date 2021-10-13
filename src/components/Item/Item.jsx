@@ -1,33 +1,34 @@
 import './Item.scss';
-import ItemImg from '../../assets/img/items/item1.png';
 
 function Item({ img, title, price, priceSale, plusLink }) {
 	return (
 		<article className="item">
 			<div className="item-img-container">
-				<img className="item-img" src={ItemImg} alt="" />
+				<img className="item-img" src={img} alt="" />
 				<div className="item-icon-container transition-all">
 					<div className="icon-container pointer">
-						<i className="icon-cart"></i>
+						<i className="icon-icon-cart"></i>
 					</div>
 					<div className="icon-container pointer">
-						<i className="icon-search-plus"></i>
+						<a href={plusLink}>
+							<i className="icon-icon-search-plus"></i>
+						</a>
 					</div>
 					<div className="icon-container pointer">
-						<i className="icon-hart"></i>
+						<i className="icon-icon-hart"></i>
 					</div>
 				</div>
 			</div>
 
-			<h3 className="item-title">Vel elit euismod</h3>
+			<h3 className="item-title">{title}</h3>
 			<div className="color-icons">
 				<i className="icon-color icon-yellow"></i>
 				<i className="icon-color icon-pink"></i>
 				<i className="icon-color icon-violet"></i>
 			</div>
 			<div>
-				<span className="item-price">$26.00</span>
-				<span className="item-price promo-price">$26.00</span>
+				<span className="item-price">{price}</span>
+				<span className="item-price promo-price">{priceSale}</span>
 			</div>
 		</article>
 	);
