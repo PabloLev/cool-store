@@ -19,7 +19,6 @@ function Item({ img, title, price, priceSale, plusLink }) {
 					</div>
 				</div>
 			</div>
-
 			<h3 className="item-title">{title}</h3>
 			<div className="color-icons">
 				<i className="icon-color icon-yellow"></i>

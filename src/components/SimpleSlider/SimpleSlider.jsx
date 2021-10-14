@@ -3,7 +3,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import promo1 from '../../assets/img/promo/promo1.png';
-// import promo1b from '../../assets/img/promo/promo1b.png';
 import promo2 from '../../assets/img/promo/promo2.png';
 import promo3 from '../../assets/img/promo/promo3.png';
 import './SimpleSlider.scss';
@@ -29,7 +28,6 @@ export default class SimpleSlider extends Component {
 			fade: true,
 			autoplay: true,
 			pauseOnFocus: false,
-
 			centerPadding: '150px',
 			nextArrow: <SampleNextArrow />,
 			prevArrow: <SamplePrevArrow />,

@@ -21,7 +21,14 @@
 			}
 		}
 		.promo-info {
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			justify-content: center;
+			align-items: flex-start;
 			max-width: 64.4rem;
+			height: 100%;
+
 			.promo-info-subtitle {
 				font-family: 'Lato', sans-serif;
 				color: $primary;
