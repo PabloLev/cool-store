@@ -10,11 +10,11 @@ import './SimpleSlider.scss';
 import Slide from '../Slide/Slide';
 
 function SampleNextArrow(props) {
-	const { className, style, onClick } = props;
+	const { className, onClick } = props;
 	return <div className={className} onClick={onClick} />;
 }
 function SamplePrevArrow(props) {
-	const { className, style, onClick } = props;
+	const { className, onClick } = props;
 	return <div className={className} onClick={onClick} />;
 }
 

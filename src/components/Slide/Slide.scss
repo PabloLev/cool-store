@@ -10,7 +10,8 @@
 		align-items: center;
 		width: 90%;
 		margin: 0 auto;
-		min-height: 76.4rem;
+		// min-height: 76.4rem;
+		min-height: calc(100vh - 12.5rem);
 		.product-imgb {
 			height: 100%;
 			.promo-imgb {
@@ -54,6 +55,11 @@
 				background-color: $primary;
 				color: $white;
 				border-radius: 0.2rem;
+				transition: all 0.3s;
+				cursor: pointer;
+				&:hover {
+					background-color: $violet;
+				}
 			}
 		}
 		.product-img {
