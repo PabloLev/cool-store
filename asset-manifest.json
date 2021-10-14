@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cool-store/static/css/main.cc0f6434.chunk.css",
-    "main.js": "/cool-store/static/js/main.b2b38ce8.chunk.js",
-    "main.js.map": "/cool-store/static/js/main.b2b38ce8.chunk.js.map",
+    "main.css": "/cool-store/static/css/main.45dad9dc.chunk.css",
+    "main.js": "/cool-store/static/js/main.82e6349c.chunk.js",
+    "main.js.map": "/cool-store/static/js/main.82e6349c.chunk.js.map",
     "runtime-main.js": "/cool-store/static/js/runtime-main.5830e28c.js",
     "runtime-main.js.map": "/cool-store/static/js/runtime-main.5830e28c.js.map",
     "static/css/2.def18691.chunk.css": "/cool-store/static/css/2.def18691.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.648f115c.chunk.js.map": "/cool-store/static/js/3.648f115c.chunk.js.map",
     "index.html": "/cool-store/index.html",
     "static/css/2.def18691.chunk.css.map": "/cool-store/static/css/2.def18691.chunk.css.map",
-    "static/css/main.cc0f6434.chunk.css.map": "/cool-store/static/css/main.cc0f6434.chunk.css.map",
+    "static/css/main.45dad9dc.chunk.css.map": "/cool-store/static/css/main.45dad9dc.chunk.css.map",
     "static/js/2.af2f148e.chunk.js.LICENSE.txt": "/cool-store/static/js/2.af2f148e.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/cool-store/static/media/icon-user.fbc0951e.svg",
     "static/media/item1.9ce9840d.png": "/cool-store/static/media/item1.9ce9840d.png",
@@ -37,7 +37,7 @@
     "static/js/runtime-main.5830e28c.js",
     "static/css/2.def18691.chunk.css",
     "static/js/2.af2f148e.chunk.js",
-    "static/css/main.cc0f6434.chunk.css",
-    "static/js/main.b2b38ce8.chunk.js"
+    "static/css/main.45dad9dc.chunk.css",
+    "static/js/main.82e6349c.chunk.js"
   ]
 }
