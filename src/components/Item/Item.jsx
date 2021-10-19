@@ -1,6 +1,16 @@
+import { useState } from 'react';
+import ItemCount from '../ItemCount/ItemCount';
 import './Item.scss';
 
 function Item({ img, title, price, priceSale, plusLink }) {
+	const [counterValue, setCounterValue] = useState(0);
+	const inStock = 5;
+	const sum = () => {
+		counterValue < inStock ? setCounterValue(counterValue + 1) : console.log('No hay stock');
+	};
+	const substract = () => {
+		counterValue > 0 ? setCounterValue(counterValue - 1) : console.log('El número debe ser mayor a cero');
+	};
 	return (
 		<article className="item">
 			<div className="item-img-container">
@@ -29,6 +39,7 @@ function Item({ img, title, price, priceSale, plusLink }) {
 				<span className="item-price">{price}</span>
 				<span className="item-price promo-price">{priceSale}</span>
 			</div>
+			<ItemCount stock={inStock} initial={counterValue} onAdd={sum} decrease={substract} />
 		</article>
 	);
 }

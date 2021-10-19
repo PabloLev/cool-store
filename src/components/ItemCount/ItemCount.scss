@@ -1,0 +1,21 @@
+@import '../../scss/variables.scss';
+.counter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $counter;
+	height: 1.5rem;
+	width: 5rem;
+	margin: 1rem 0;
+	.counter-btn {
+		height: 1.5rem;
+		width: 1.2rem;
+		background-color: $counter-btn;
+		border: none;
+	}
+	.counter-value {
+		font-size: 1.2rem;
+		line-height: 1.5rem;
+		color: $black;
+	}
+}
