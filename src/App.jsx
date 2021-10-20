@@ -1,6 +1,6 @@
 import './scss/App.scss';
 
-import Header from './components/Header/Header';
+import Header from './components/Header';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Hero from './components/Hero/Hero';
 

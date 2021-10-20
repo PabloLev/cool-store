@@ -1,4 +1,4 @@
-import Item from '../Item/Item';
+import Item from '../Item';
 import ItemImg1 from '../../assets/img/items/item1.png';
 import ItemImg2 from '../../assets/img/items/item2.png';
 import ItemImg3 from '../../assets/img/items/item3.png';

@@ -1,6 +1,6 @@
 import './ItemCount.scss';
 
-function Counter({ stock, initial, onAdd, decrease }) {
+function ItemCount({ stock, initial, onAdd, decrease }) {
 	return (
 		<div className="counter">
 			<button className="counter-btn" onClick={decrease}>
@@ -14,4 +14,4 @@ function Counter({ stock, initial, onAdd, decrease }) {
 	);
 }
 
-export default Counter;
+export default ItemCount;
