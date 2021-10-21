@@ -8,7 +8,7 @@
         "priceSale": 50,
         "stock": 3,
         "plusLink": "/#",
-        "img": "cool-store/assets/img/items/item1.png"
+        "img": "assets/img/items/item1.png"
     },   
     {
         "category": "home",
