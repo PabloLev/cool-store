@@ -1,6 +1,7 @@
 import Item from '../Item';
 import { useEffect, useState } from 'react';
 import Products from '../../data/Products.json';
+import './ItemList.scss';
 
 function ItemList() {
 	const [products, setProducts] = useState([]);
@@ -13,7 +14,7 @@ function ItemList() {
 				} else {
 					reject('No se encontró nada');
 				}
-			}, 500);
+			}, 2000);
 		});
 
 	useEffect(() => {
@@ -24,17 +25,30 @@ function ItemList() {
 	console.log(products);
 	return (
 		<>
-			{products.map((product) => (
-				<Item
-					img={product.img}
-					name={product.name}
-					price={product.price}
-					priceSale={product.priceSale}
-					plusLink={product.plusLink}
-					stock={product.stock}
-					key={product.id}
-				/>
-			))}
+			{products.length ? (
+				products.map((product) => (
+					<Item
+						img={product.img}
+						name={product.name}
+						price={product.price}
+						priceSale={product.priceSale}
+						plusLink={product.plusLink}
+						stock={product.stock}
+						key={product.id}
+					/>
+				))
+			) : (
+				<div class='loader'>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			)}
 		</>
 	);
 }
