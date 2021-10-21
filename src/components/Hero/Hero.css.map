@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,mLAAI;ADCZ,AACC,KADI,CACJ,GAAG,CAAC;EACH,KAAK,EAAE,IAAI;CACX",
+    "sources": [
+        "Hero.scss",
+        "../../scss/variables.scss"
+    ],
+    "names": [],
+    "file": "Hero.css"
+}

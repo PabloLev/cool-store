@@ -1,0 +1,134 @@
+[
+    {
+        "category": "home",
+        "id": "1",
+        "name": "Vel elit euismod",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 9500,
+        "priceSale": 50,
+        "stock": 3,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item1.png"
+    },   
+    {
+        "category": "home",
+        "id": "2",
+        "name": "Ultricies condim imperdiet",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 8400,
+        "priceSale": 50,
+        "stock": 2,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item2.png"
+    },  
+    {
+        "category": "home",
+        "id": "3",
+        "name": "Vitae suspendisse sed",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 3900,
+        "priceSale": 50,
+        "stock": 6,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item3.png"
+    },  
+    {
+        "category": "home",
+        "id": "4",
+        "name": "Sed at fermentum",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 1500,
+        "priceSale": 50,
+        "stock": 7,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item4.png"
+    },  
+    {
+        "category": "home",
+        "id": "5",
+        "name": "Fusce pellentesque at",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 3100,
+        "priceSale": 50,
+        "stock": 1,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item5.png"
+    },  
+    {
+        "category": "home",
+        "id": "6",
+        "name": "Vestibulum magna laoreet",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 2100,
+        "priceSale": 50,
+        "stock": 2,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item6.png"
+    },  
+    {
+        "category": "home",
+        "id": "7",
+        "name": "Sollicitudin amet orci",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 2150,
+        "priceSale": 50,
+        "stock": 3,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item7.png"
+    },  
+    {
+        "category": "home",
+        "id": "8",
+        "name": "Ultrices mauris sit",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 1100,
+        "priceSale": 50,
+        "stock": 6,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item8.png"
+    },  
+    {
+        "category": "home",
+        "id": "9",
+        "name": "Pellentesque condimentum ac",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 1100,
+        "priceSale": 50,
+        "stock": 2,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item9.png"
+    },  
+    {
+        "category": "home",
+        "id": "10",
+        "name": "Cras scelerisque velit",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 9800,
+        "priceSale": 50,
+        "stock": 9,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item10.png"
+    },  
+    {
+        "category": "home",
+        "id": "11",
+        "name": "Lectus vulputate faucibus",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 1100,
+        "priceSale": 50,
+        "stock": 4,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item11.png"
+    },  
+    {
+        "category": "home",
+        "id": "12",
+        "name": "Purus risus, ut",
+        "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
+        "price": 3500,
+        "priceSale": 50,
+        "stock": 7,
+        "plusLink": "/#",
+        "img": "cool-store/assets/img/items/item12.png"
+    }  
+]

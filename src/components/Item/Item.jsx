@@ -2,44 +2,55 @@ import { useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import './Item.scss';
 
-function Item({ img, title, price, priceSale, plusLink }) {
+function Item({ img, name, price, priceSale, plusLink, stock }) {
 	const [counterValue, setCounterValue] = useState(0);
-	const inStock = 5;
+
 	const sum = () => {
-		counterValue < inStock ? setCounterValue(counterValue + 1) : console.log('No hay stock');
+		counterValue < stock
+			? setCounterValue(counterValue + 1)
+			: console.log('No hay stock');
 	};
 	const substract = () => {
-		counterValue > 0 ? setCounterValue(counterValue - 1) : console.log('El número debe ser mayor a cero');
+		counterValue > 0
+			? setCounterValue(counterValue - 1)
+			: console.log('El número debe ser mayor a cero');
 	};
+
+	console.log(img);
 	return (
-		<article className="item">
-			<div className="item-img-container">
-				<img className="item-img" src={img} alt="" />
-				<div className="item-icon-container transition-all">
-					<div className="icon-container pointer">
-						<i className="icon-icon-cart"></i>
+		<article className='item'>
+			<div className='item-img-container'>
+				<img className='item-img' src={img} alt={name} />
+				<div className='item-icon-container transition-all'>
+					<div className='icon-container pointer'>
+						<i className='icon-icon-cart'></i>
 					</div>
-					<div className="icon-container pointer">
+					<div className='icon-container pointer'>
 						<a href={plusLink}>
-							<i className="icon-icon-search-plus"></i>
+							<i className='icon-icon-search-plus'></i>
 						</a>
 					</div>
-					<div className="icon-container pointer">
-						<i className="icon-icon-hart"></i>
+					<div className='icon-container pointer'>
+						<i className='icon-icon-hart'></i>
 					</div>
 				</div>
 			</div>
-			<h3 className="item-title">{title}</h3>
-			<div className="color-icons">
-				<i className="icon-color icon-yellow"></i>
-				<i className="icon-color icon-pink"></i>
-				<i className="icon-color icon-violet"></i>
+			<h3 className='item-title'>{name}</h3>
+			<div className='color-icons'>
+				<i className='icon-color icon-yellow'></i>
+				<i className='icon-color icon-pink'></i>
+				<i className='icon-color icon-violet'></i>
 			</div>
 			<div>
-				<span className="item-price">{price}</span>
-				<span className="item-price promo-price">{priceSale}</span>
+				<span className='item-price'>${(price * priceSale) / 100}</span>
+				<span className='item-price promo-price'>${price}</span>
 			</div>
-			<ItemCount stock={inStock} initial={counterValue} onAdd={sum} decrease={substract} />
+			<ItemCount
+				stock={stock}
+				initial={counterValue}
+				onAdd={sum}
+				decrease={substract}
+			/>
 		</article>
 	);
 }

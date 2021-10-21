@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato&display=swap");
+.slick-slider .slick-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 700;
+}
+
+.slick-slider .slick-prev {
+  left: 5rem;
+}
+
+.slick-slider .slick-prev:before {
+  position: absolute;
+  font-size: 6rem;
+  color: #7e33e0;
+}
+
+.slick-slider .slick-next {
+  right: 5rem;
+}
+
+.slick-slider .slick-next:before {
+  font-size: 6rem;
+  color: #7e33e0;
+}
+
+.slick-slider .slick-dots {
+  bottom: 5rem;
+}
+
+.slick-slider .slick-dots button:before {
+  content: '';
+  height: 1rem;
+  width: 1rem;
+  background-color: transparent;
+  border: 1px solid #fb2e86;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  opacity: 1;
+}
+
+.slick-slider .slick-dots .slick-active button:before {
+  content: '';
+  height: 1rem;
+  width: 1rem;
+  background-color: #fb2e86;
+  border: 1px solid #fb2e86;
+  opacity: 1;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .slick-slider .slick-arrow {
+    display: none;
+  }
+}
+/*# sourceMappingURL=SimpleSlider.css.map */

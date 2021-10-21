@@ -9,8 +9,8 @@ function App() {
 		<>
 			<Header />
 			<Hero />
-			<main className="main-container">
-				<ItemListContainer gretting="Productos" />
+			<main className='main-container'>
+				<ItemListContainer gretting='Productos' />
 			</main>
 		</>
 	);
