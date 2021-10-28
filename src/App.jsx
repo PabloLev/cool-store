@@ -3,6 +3,7 @@ import './scss/App.scss';
 import Header from './components/Header';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Hero from './components/Hero/Hero';
+import Footer from './components/Footer/Footer';
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 			<main className='main-container'>
 				<ItemListContainer gretting='Productos' />
 			</main>
+			<Footer />
 		</>
 	);
 }

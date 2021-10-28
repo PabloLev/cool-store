@@ -1,7 +1,7 @@
 import Item from '../Item';
 import { useEffect, useState } from 'react';
-import Products from '../../data/Products.json';
-import './ItemList.scss';
+import Products from '../../data/ProductsLocal.json';
+import style from './ItemList.module.scss';
 
 function ItemList() {
 	const [products, setProducts] = useState([]);
@@ -38,8 +38,8 @@ function ItemList() {
 					/>
 				))
 			) : (
-				<div className='loader-container'>
-					<div className='loader'>
+				<div className={style['loader-container']}>
+					<div className={style['loader']}>
 						<div></div>
 						<div></div>
 						<div></div>

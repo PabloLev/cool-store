@@ -1,0 +1,51 @@
+@import '../../scss/variables.scss';
+.footer {
+	min-height: 10rem;
+	background-color: #eeeffb;
+	.footer-info-container {
+		display: grid;
+		grid-template-columns: auto 1fr 1fr 1fr;
+		justify-content: center;
+		justify-items: center;
+		width: 63%;
+		margin: 5rem auto;
+	}
+	.social {
+		background-color: #e7e4f8;
+		.footer-social {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 65%;
+			margin: 0 auto;
+			min-height: 3rem;
+			padding: 1rem;
+			.footer-copyright {
+				font-size: 1.6rem;
+				color: #9da0ae;
+			}
+			.social-icon-container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.social-icon {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background-color: #000000;
+					border-radius: 50%;
+					height: 2rem;
+					width: 2rem;
+					margin: 0 0.5rem;
+
+					i {
+						color: $white;
+						font-size: 1.2rem;
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+}

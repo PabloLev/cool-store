@@ -1,13 +1,13 @@
-import './ItemCount.scss';
+import style from './ItemCount.module.scss';
 
 function ItemCount({ stock, initial, onAdd, decrease }) {
 	return (
-		<div className="counter">
-			<button className="counter-btn" onClick={decrease}>
+		<div className={style.counter}>
+			<button className={style.counterBtn} onClick={decrease}>
 				-
 			</button>
-			<span className="counter-value">{initial}</span>
-			<button className="counter-btn" onClick={onAdd}>
+			<span className={style.counterValue}>{initial}</span>
+			<button className={style.counterBtn} onClick={onAdd}>
 				+
 			</button>
 		</div>

@@ -1,0 +1,11 @@
+@import '../../scss/variables.scss';
+.footer {
+	min-height: 10rem;
+	background-color: #eeeffb;
+	.footer-info-container {
+		display: grid;
+		grid-template-columns: auto 1f 1f 1f;
+	}
+	.footer-social-container {
+	}
+}

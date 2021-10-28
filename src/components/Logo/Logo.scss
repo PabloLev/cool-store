@@ -1,0 +1,11 @@
+@import '../../scss/variables.scss';
+
+.logo {
+	margin-right: 9rem;
+	a {
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 3.4rem;
+		font-weight: 700;
+		color: $black;
+	}
+}

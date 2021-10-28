@@ -1,3 +1,3 @@
-import ItemList from './ItemList';
+import Logo from './Logo';
 
-export default ItemList;
+export default Logo;
