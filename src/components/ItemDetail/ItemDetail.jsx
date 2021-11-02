@@ -63,7 +63,7 @@ function ItemDetail({
 				<p>{description}</p>
 			</div>
 			<div className='itemDetail-related'></div>
-			<Link to={`/`}>
+			<Link to={`/cool-store`}>
 				<button>back</button>
 			</Link>
 		</section>
