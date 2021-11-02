@@ -1,9 +1,10 @@
 import Item from '../Item';
 import { useEffect, useState } from 'react';
 import Products from '../../data/ProductsLocal.json';
-import style from './ItemList.module.scss';
+import Loader from '../Loader';
+import './ItemList.scss';
 
-function ItemList() {
+function ItemList({ titulo }) {
 	const [products, setProducts] = useState([]);
 
 	const getData = (data) =>
@@ -20,38 +21,30 @@ function ItemList() {
 	useEffect(() => {
 		getData(Products)
 			.then((res) => setProducts(res))
-			.catch((err) => console.log('error, no se está pasando nada'));
+			.catch((err) => console.log(err));
 	}, []);
-	console.log(products);
 	return (
-		<>
-			{products.length ? (
-				products.map((product) => (
-					<Item
-						img={product.img}
-						name={product.name}
-						price={product.price}
-						priceSale={product.priceSale}
-						plusLink={product.plusLink}
-						stock={product.stock}
-						key={product.id}
-					/>
-				))
-			) : (
-				<div className={style['loader-container']}>
-					<div className={style['loader']}>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			)}
-		</>
+		<section className='itemListContainer'>
+			<h1 className='title'>{titulo}</h1>
+			<div className='itemListContainer-container'>
+				{products.length ? (
+					products.map((product) => (
+						<Item
+							key={product.id}
+							id={product.id}
+							img={product.img}
+							name={product.name}
+							price={product.price}
+							priceSale={product.priceSale}
+							plusLink={product.plusLink}
+							stock={product.stock}
+						/>
+					))
+				) : (
+					<Loader />
+				)}
+			</div>
+		</section>
 	);
 }
 

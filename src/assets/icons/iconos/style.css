@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?vsq1l9');
-  src:  url('fonts/icomoon.eot?vsq1l9#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?vsq1l9') format('truetype'),
-    url('fonts/icomoon.woff?vsq1l9') format('woff'),
-    url('fonts/icomoon.svg?vsq1l9#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?7nac3v');
+  src:  url('fonts/icomoon.eot?7nac3v#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7nac3v') format('truetype'),
+    url('fonts/icomoon.woff?7nac3v') format('woff'),
+    url('fonts/icomoon.svg?7nac3v#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,7 +25,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-down-angle-svgrepo-com:before {
+.icon-icon-star:before {
+  content: "\e904";
+}
+.icon-icon-cross:before {
+  content: "\ea0f";
+}
+.icon-icon-chev-down:before {
   content: "\e900";
 }
 .icon-icon-calendar:before {
@@ -34,7 +40,6 @@
 }
 .icon-icon-cart:before {
   content: "\e902";
-  color: #fff;
 }
 .icon-icon-check:before {
   content: "\e903";
@@ -86,7 +91,4 @@
 .icon-icon-user:before {
   content: "\e911";
   color: #fff;
-}
-.icon-icon-cross:before {
-  content: "\ea0f";
 }

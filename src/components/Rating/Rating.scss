@@ -1,0 +1,14 @@
+@import '../../scss/variables.scss';
+
+.stars-container {
+	display: flex;
+	flex-direction: row;
+	i {
+		color: $star-gray;
+		font-size: 1, 2rem;
+		margin: 0 0.2rem;
+	}
+	.star-yellow {
+		color: $star-yellow;
+	}
+}
