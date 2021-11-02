@@ -9,7 +9,7 @@
         "priceSale": 50,
         "stock": 3,
         "plusLink": "/#",
-        "img": "https://ibb.co/pbwd94y"
+        "img": "https://raw.githubusercontent.com/PabloLev/cool-store/master/public/assets/img/items/item1.png"
     },   
     {
         "category": "home",
@@ -21,7 +21,7 @@
         "priceSale": 50,
         "stock": 2,
         "plusLink": "/#",
-        "img": "https://ibb.co/b6YNMNw"
+        "img": "https://raw.githubusercontent.com/PabloLev/cool-store/master/public/assets/img/items/item1.png"
     },  
     {
         "category": "tech",
