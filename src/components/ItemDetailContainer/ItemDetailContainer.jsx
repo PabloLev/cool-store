@@ -25,12 +25,11 @@ function ItemDetailContainer() {
 		getItem(Products)
 			.then((res) => {
 				setItemDetail(res.find((details) => details.id === itemId));
-				console.log(itemDetail);
 			})
 
 			.catch((err) => console.log(err));
-	}, [itemId, itemDetail]);
-
+	}, [itemId]);
+	console.log(itemDetail);
 	return (
 		<div className='itemDetailContainer'>
 			{itemDetail ? (
