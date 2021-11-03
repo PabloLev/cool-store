@@ -16,7 +16,7 @@ function App() {
 					<Hero />
 
 					<main className='main-container'>
-						<ItemListContainer gretting='ProductosXXXs' />
+						<ItemListContainer gretting='Productos' />
 					</main>
 				</Route>
 				<Route exact path='/item/:itemId'>
