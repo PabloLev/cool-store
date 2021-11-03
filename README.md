@@ -1,10 +1,14 @@
-# GH-PAGES
+# DEPLOY
 
-https://pablolev.github.io/cool-store/
+https://cool-store.netlify.app/
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Node version
+
+node.js v14.18.1
 
 ## Available Scripts
 
