@@ -12,7 +12,7 @@ function Item({ id, img, name, price, priceSale, plusLink, stock }) {
 						<i className='icon-icon-cart'></i>
 					</div>
 					<div className='icon-container pointer'>
-						<Link to={`/item/${id}`}>
+						<Link to={`${process.env.PUBLIC_URL}/item/${id}`}>
 							<i className='icon-icon-search-plus'></i>
 						</Link>
 					</div>
