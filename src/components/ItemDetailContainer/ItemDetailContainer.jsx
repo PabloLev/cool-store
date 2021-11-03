@@ -8,7 +8,6 @@ import { useParams } from 'react-router';
 function ItemDetailContainer() {
 	const [itemDetail, setItemDetail] = useState(null);
 	const { itemId } = useParams();
-	// const { itemId } = parseInt(2);
 	//Promise
 	const getItem = (data) =>
 		new Promise((resolve, reject) => {
