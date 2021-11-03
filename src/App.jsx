@@ -12,14 +12,14 @@ function App() {
 		<BrowserRouter>
 			<Header />
 			<Switch>
-				<Route exact path={process.env.PUBLIC_URL + '/'}>
+				<Route exact path='/'>
 					<Hero />
 
 					<main className='main-container'>
 						<ItemListContainer gretting='ProductosXXXs' />
 					</main>
 				</Route>
-				<Route exact path={process.env.PUBLIC_URL + '/item/:itemId'}>
+				<Route exact path='/item/:itemId'>
 					<main className='main-container'>
 						<ItemDetailContainer />
 					</main>
