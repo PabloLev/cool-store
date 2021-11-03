@@ -16,7 +16,7 @@ function App() {
 					<Hero />
 
 					<main className='main-container'>
-						<ItemListContainer gretting='ProductosXXX' />
+						<ItemListContainer gretting='ProductosXXXs' />
 					</main>
 				</Route>
 				<Route exact path={process.env.PUBLIC_URL + '/item/:itemId'}>
