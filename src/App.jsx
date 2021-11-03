@@ -12,14 +12,14 @@ function App() {
 		<BrowserRouter>
 			<Header />
 			<Switch>
-				<Route exact path='/cool-store'>
+				<Route exact path='/'>
 					<Hero />
 
 					<main className='main-container'>
 						<ItemListContainer gretting='Productos' />
 					</main>
 				</Route>
-				<Route exact path='/cool-store/item/:itemId'>
+				<Route exact path='/item/:itemId'>
 					<main className='main-container'>
 						<ItemDetailContainer />
 					</main>
