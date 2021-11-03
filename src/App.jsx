@@ -16,7 +16,6 @@ function App() {
 					<Hero />
 
 					<main className='main-container'>
-						{/* <ItemDetailContainer /> */}
 						<ItemListContainer gretting='Productos' />
 					</main>
 				</Route>
