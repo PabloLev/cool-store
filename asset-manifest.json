@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cool-store/static/css/main.0b0c8d5f.chunk.css",
-    "main.js": "/cool-store/static/js/main.e6af740b.chunk.js",
-    "main.js.map": "/cool-store/static/js/main.e6af740b.chunk.js.map",
+    "main.js": "/cool-store/static/js/main.e270fbfa.chunk.js",
+    "main.js.map": "/cool-store/static/js/main.e270fbfa.chunk.js.map",
     "runtime-main.js": "/cool-store/static/js/runtime-main.5c9a1615.js",
     "runtime-main.js.map": "/cool-store/static/js/runtime-main.5c9a1615.js.map",
     "static/css/2.def18691.chunk.css": "/cool-store/static/css/2.def18691.chunk.css",
@@ -26,6 +26,6 @@
     "static/css/2.def18691.chunk.css",
     "static/js/2.2c2cb550.chunk.js",
     "static/css/main.0b0c8d5f.chunk.css",
-    "static/js/main.e6af740b.chunk.js"
+    "static/js/main.e270fbfa.chunk.js"
   ]
 }
