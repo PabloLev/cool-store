@@ -29,7 +29,7 @@ function ItemDetailContainer() {
 			})
 
 			.catch((err) => console.log(err));
-	}, [itemId]);
+	}, [itemId, itemDetail]);
 
 	return (
 		<div className='itemDetailContainer'>
