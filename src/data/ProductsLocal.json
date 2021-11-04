@@ -1,6 +1,6 @@
 [
     {
-        "category": "home",
+        "category": "house",
         "id": "1",
         "name": "Vel elit euismod",
         "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
@@ -12,7 +12,7 @@
         "img": "https://raw.githubusercontent.com/PabloLev/cool-store/master/public/assets/img/items/item1.png"
     },   
     {
-        "category": "home",
+        "category": "house",
         "id": "2",
         "name": "Ultricies condim imperdiet",
         "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
@@ -60,7 +60,7 @@
         "img": "https://raw.githubusercontent.com/PabloLev/cool-store/master/public/assets/img/items/item5.png"
     },  
     {
-        "category": "home",
+        "category": "house",
         "id": "6",
         "name": "Vestibulum magna laoreet",
         "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
@@ -72,7 +72,7 @@
         "img": "https://raw.githubusercontent.com/PabloLev/cool-store/master/public/assets/img/items/item6.png"
     },  
     {
-        "category": "home",
+        "category": "house",
         "id": "7",
         "name": "Sollicitudin amet orci",
         "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
@@ -84,7 +84,7 @@
         "img": "https://raw.githubusercontent.com/PabloLev/cool-store/master/public/assets/img/items/item7.png"
     },  
     {
-        "category": "home",
+        "category": "house",
         "id": "8",
         "name": "Ultrices mauris sit",
         "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
@@ -108,7 +108,7 @@
         "img": "https://raw.githubusercontent.com/PabloLev/cool-store/master/public/assets/img/items/item9.png"
     },  
     {
-        "category": "home",
+        "category": "house",
         "id": "10",
         "name": "Cras scelerisque velit",
         "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
@@ -120,7 +120,7 @@
         "img": "https://raw.githubusercontent.com/PabloLev/cool-store/master/public/assets/img/items/item10.png"
     },  
     {
-        "category": "home",
+        "category": "house",
         "id": "11",
         "name": "Lectus vulputate faucibus",
         "description": "Lorem ipsum dor met dreas nurte lofras nujis.",
@@ -132,7 +132,7 @@
         "img": "https://raw.githubusercontent.com/PabloLev/cool-store/master/public/assets/img/items/item11.png"
     },  
     {
-        "category": "home",
+        "category": "house",
         "id": "12",
         "name": "Purus risus, ut",
         "description": "Lorem ipsum dor met dreas nurte lofras nujis.",

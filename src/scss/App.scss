@@ -513,6 +513,10 @@ i {
 	color: $primary;
 }
 //END TEXT_COLORS
+//TEXT FORMAT
+.text-uppercase {
+	text-transform: uppercase;
+}
 //TRANSITIONS
 .transition-all {
 	transition: all 0.3s;

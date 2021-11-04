@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Rating from '../Rating';
 import './Item.scss';
 
-function Item({ id, img, name, price, priceSale, plusLink, stock }) {
+function Item({ id, category, img, name, price, priceSale, plusLink, stock }) {
 	return (
 		<article className='item'>
 			<div className='item-img-container'>
@@ -22,6 +22,7 @@ function Item({ id, img, name, price, priceSale, plusLink, stock }) {
 				</div>
 			</div>
 			<h3 className='item-title'>{name}</h3>
+			<span className='text-uppercase'>{category}</span>
 			<Rating />
 			<div className='color-icons'>
 				<i className='icon-color icon-yellow'></i>
