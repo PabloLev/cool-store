@@ -1,11 +1,16 @@
 @import '../../scss/variables.scss';
-.footer {
-	min-height: 10rem;
-	background-color: #eeeffb;
-	.footer-info-container {
-		display: grid;
-		grid-template-columns: auto 1f 1f 1f;
+.footer-links-container {
+	display: flex;
+	flex-direction: column;
+	.footer-links-title {
+		font-family: 'Josefin Sans', sans-serif;
+		margin-bottom: 2rem;
+		font-size: 2.2rem;
 	}
-	.footer-social-container {
+	.footer-link {
+		font-family: 'Lato', sans-serif;
+		margin-top: 2rem;
+		font-size: 1.6rem;
+		color: #8a8fb9;
 	}
 }

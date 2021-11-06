@@ -1,24 +1,20 @@
 import './FooterLinks.scss';
+import { Link } from 'react-router-dom';
 
-function Footer() {
+function Footer({ title, linkList }) {
 	return (
-		<div>
-			<h5>Categories</h5>
-			<ul>
-				<a href='/#'>Laptops & Computers</a>
-			</ul>
-			<ul>
-				<a href='/#'>Cameras & Photography</a>
-			</ul>
-			<ul>
-				<a href='/#'>Smart Phones & Tablets</a>
-			</ul>
-			<ul>
-				<a href='/#'>Video Games & Consoles</a>
-			</ul>
-			<ul>
-				<a href='/#'>Waterproof Headphones</a>
-			</ul>
+		<div className='footer-links-container'>
+			<h5 className='footer-links-title'>{title}</h5>
+			{linkList &&
+				linkList.map((linkName) => (
+					<Link
+						to={linkName.url}
+						className='footer-link'
+						key={linkName.titulo}
+					>
+						<span className='link-text'>{linkName.titulo}</span>
+					</Link>
+				))}
 		</div>
 	);
 }

@@ -36,7 +36,7 @@ function ItemList({ titulo, category }) {
 	return (
 		<section className='itemListContainer'>
 			<h1 className='title'>{titulo}</h1>
-			<div>
+			<nav>
 				<Link key='all' to={`/`}>
 					<span className='ms-2 me-2 text-uppercase pointer'>
 						all
@@ -52,7 +52,7 @@ function ItemList({ titulo, category }) {
 						house
 					</span>
 				</Link>
-			</div>
+			</nav>
 
 			<div className='itemListContainer-container'>
 				{products.length ? (

@@ -22,13 +22,15 @@ function Item({ id, category, img, name, price, priceSale, plusLink, stock }) {
 				</div>
 			</div>
 			<h3 className='item-title'>{name}</h3>
-			<span className='text-uppercase'>{category}</span>
+
 			<Rating />
+			<span className='text-uppercase'>{category}</span>
 			<div className='color-icons'>
 				<i className='icon-color icon-yellow'></i>
 				<i className='icon-color icon-pink'></i>
 				<i className='icon-color icon-violet'></i>
 			</div>
+
 			<div>
 				<span className='item-price'>${(price * priceSale) / 100}</span>
 				<span className='item-price promo-price'>${price}</span>
