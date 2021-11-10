@@ -19,7 +19,7 @@ function App() {
 				</Route>
 				<Route exact path='/category/:categoryId'>
 					<main className='main-container'>
-						<ItemListContainer gretting='Productos' />
+						<ItemListContainer gretting='Products' />
 					</main>
 				</Route>
 				<Route exact path='/item/:itemId'>
@@ -29,7 +29,7 @@ function App() {
 				</Route>
 				<Route exact path='/shop'>
 					<main className='main-container'>
-						<ItemListContainer gretting='Shop' />
+						<ItemListContainer gretting='Products' />
 					</main>
 				</Route>
 				<Route exact path='/contact'>
