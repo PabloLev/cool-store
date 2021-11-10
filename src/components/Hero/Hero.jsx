@@ -1,9 +1,9 @@
-import './Hero.scss';
+// import './Hero.scss';
 import SimpleSlider from '../SimpleSlider/SimpleSlider';
 
 function Hero() {
 	return (
-		<div className="hero">
+		<div className='hero'>
 			<SimpleSlider />
 		</div>
 	);

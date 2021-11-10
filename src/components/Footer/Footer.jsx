@@ -4,7 +4,7 @@ import './Footer.scss';
 
 function Footer() {
 	return (
-		<div className='footer mt-6'>
+		<div className='footer'>
 			<div className='footer-info-container '>
 				<div>
 					<Logo />

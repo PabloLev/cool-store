@@ -1,11 +1,12 @@
 import './Logo.scss';
+import { Link } from 'react-router-dom';
 
 function Logo() {
 	return (
 		<div className='logo'>
-			<a className='pointer' href='/#'>
+			<Link className='pointer' to='/'>
 				Hekto
-			</a>
+			</Link>
 		</div>
 	);
 }

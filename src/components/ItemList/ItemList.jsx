@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Products from '../../data/ProductsLocal.json';
 import Loader from '../Loader';
 import './ItemList.scss';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function ItemList({ titulo, category }) {
 	const [products, setProducts] = useState([]);
@@ -37,21 +37,30 @@ function ItemList({ titulo, category }) {
 		<section className='itemListContainer'>
 			<h1 className='title'>{titulo}</h1>
 			<nav>
-				<Link key='all' to={`/`}>
+				<NavLink activeClassName='active' key='all' exact to={`/shop`}>
 					<span className='ms-2 me-2 text-uppercase pointer'>
 						all
 					</span>
-				</Link>
-				<Link key='tech' to={`/category/tech`}>
+				</NavLink>
+				<NavLink
+					activeClassName='active'
+					key='tech'
+					exact
+					to={`/category/tech`}
+				>
 					<span className='ms-2 me-2 text-uppercase pointer'>
 						tech
 					</span>
-				</Link>
-				<Link key='home' to={`/category/house`}>
+				</NavLink>
+				<NavLink
+					activeClassName='active'
+					key='home'
+					to={`/category/house`}
+				>
 					<span className='ms-2 me-2 text-uppercase pointer'>
 						house
 					</span>
-				</Link>
+				</NavLink>
 			</nav>
 
 			<div className='itemListContainer-container'>

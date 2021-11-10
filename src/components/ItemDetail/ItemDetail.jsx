@@ -11,17 +11,14 @@ function ItemDetail({
 	price,
 	priceSale,
 	stock,
+	onAdd,
+	showCount,
+	itemsInCart,
 }) {
 	return (
 		<section className='itemDetail'>
 			<article className='itemDetail-card'>
 				<div className='card-img-container'>
-					{/* <div className='img-secondary-container'>
-						<img className='img-secondary' src='' alt='' />
-						<img className='img-secondary' src='' alt='' />
-						<img className='img-secondary' src='' alt='' />
-					</div> */}
-
 					<img className='img-primary' src={img} alt={name} />
 				</div>
 				<div className='card-info'>
@@ -55,7 +52,21 @@ function ItemDetail({
 							<i className='icon-icon-twitter'></i>
 						</div>
 					</div>
-					<ItemCount stock={stock} initial={0} />
+					{!showCount && (
+						<ItemCount
+							stock={stock}
+							initial={1}
+							onAdd={onAdd}
+							showCount={showCount}
+						/>
+					)}
+					{showCount && (
+						<Link to='/cart'>
+							<button>
+								Ir A Carrito con {itemsInCart} items
+							</button>
+						</Link>
+					)}
 				</div>
 			</article>
 			<div className='itemDetail-description'>
@@ -63,9 +74,7 @@ function ItemDetail({
 				<p>{description}</p>
 			</div>
 			<div className='itemDetail-related'></div>
-			<Link to={`/cart`}>
-				<button>Finalizar compra</button>
-			</Link>
+
 			<Link to={`/`}>
 				<button>back</button>
 			</Link>

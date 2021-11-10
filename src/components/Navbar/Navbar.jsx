@@ -1,5 +1,6 @@
 import Logo from '../Logo/Logo';
-import './Navbar.scss';
+// import './Navbar.scss';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
 	return (
@@ -7,7 +8,9 @@ function Navbar() {
 			<div className='navbar-container'>
 				<div className='navigation'>
 					{/* <!-- LOGO --> */}
+
 					<Logo />
+
 					{/* <!-- NAVIGATION MENU --> */}
 					<ul className='nav-links'>
 						<input
@@ -20,15 +23,27 @@ function Navbar() {
 						</label>
 						<div className='menu'>
 							<li className='nav-item'>
-								<a className='active' href='/#'>
+								<NavLink activeClassName='active' exact to='/'>
 									Home
-								</a>
+								</NavLink>
 							</li>
 							<li className='nav-item'>
-								<a href='/#'>Shop</a>
+								<NavLink
+									activeClassName='active'
+									exact
+									to='/shop'
+								>
+									Shop
+								</NavLink>
 							</li>
 							<li className='nav-item'>
-								<a href='/#'>Contact</a>
+								<NavLink
+									activeClassName='active'
+									exact
+									to='/contact'
+								>
+									Contact
+								</NavLink>
 							</li>
 						</div>
 					</ul>

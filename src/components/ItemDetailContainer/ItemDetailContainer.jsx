@@ -7,6 +7,9 @@ import { useParams } from 'react-router';
 
 function ItemDetailContainer() {
 	const [itemDetail, setItemDetail] = useState(null);
+	const [showCount, setShowCount] = useState(false);
+	const [itemsInCart, setItemsInCart] = useState(undefined);
+
 	const { itemId } = useParams();
 	//Promise
 	const getItem = (data) =>
@@ -28,7 +31,13 @@ function ItemDetailContainer() {
 
 			.catch((err) => console.log(err));
 	}, [itemId]);
-	console.log(itemDetail);
+
+	const onAdd = (items) => {
+		console.log(items);
+		setShowCount(!showCount);
+		setItemsInCart(items);
+	};
+
 	return (
 		<div className='itemDetailContainer'>
 			{itemDetail ? (
@@ -41,6 +50,9 @@ function ItemDetailContainer() {
 					price={itemDetail.price}
 					priceSale={itemDetail.priceSale}
 					stock={itemDetail.stock}
+					onAdd={onAdd}
+					showCount={showCount}
+					itemsInCart={itemsInCart}
 				/>
 			) : (
 				<Loader />

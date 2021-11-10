@@ -6,6 +6,8 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import CartContainer from './components/CartContainer';
+import Contact from './components/Contact/Contact';
 
 function App() {
 	return (
@@ -14,12 +16,8 @@ function App() {
 			<Switch>
 				<Route exact path='/'>
 					<Hero />
-					<main className='main-container'>
-						<ItemListContainer gretting='Productos' />
-					</main>
 				</Route>
 				<Route exact path='/category/:categoryId'>
-					<Hero />
 					<main className='main-container'>
 						<ItemListContainer gretting='Productos' />
 					</main>
@@ -28,6 +26,24 @@ function App() {
 					<main className='main-container'>
 						<ItemDetailContainer />
 					</main>
+				</Route>
+				<Route exact path='/shop'>
+					<main className='main-container'>
+						<ItemListContainer gretting='Shop' />
+					</main>
+				</Route>
+				<Route exact path='/contact'>
+					<main className='main-container'>
+						<Contact />
+					</main>
+				</Route>
+				<Route exact path='/cart'>
+					<main className='main-container'>
+						<CartContainer />
+					</main>
+				</Route>
+				<Route>
+					<h1>Página no encontrada</h1>
 				</Route>
 			</Switch>
 			<Footer />
