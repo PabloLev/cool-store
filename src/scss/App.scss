@@ -306,3 +306,17 @@ i {
 .active {
 	color: $primary !important;
 }
+
+//Buttons
+.button {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.7rem;
+	font-weight: 600;
+	padding: 1.6rem 4rem;
+	border: none;
+	background-color: #fb2e86;
+	color: #ffffff;
+	border-radius: 0.2 rem;
+	transition: all 0.3s;
+	cursor: pointer;
+}

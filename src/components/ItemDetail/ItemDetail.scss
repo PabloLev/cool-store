@@ -1,49 +1,199 @@
 @import '../../scss/variables.scss';
-.itemListContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	.title {
-		font-family: 'Josefin Sans', sans-serif;
-		font-size: 5rem;
-		font-weight: 700;
-		color: $black;
-	}
-	.itemListContainer-container {
-		display: grid;
-		justify-content: center;
-		justify-items: center;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		width: 63%;
-		margin: 5rem auto;
+.itemDetail {
+	max-width: 63%;
+	.itemDetail-card {
+		padding: 2rem;
+		margin: 5rem 0;
+		box-shadow: 0rem 0rem 2.5rem 1rem #f6f4fd;
+		display: flex;
+		justify-content: flex-start;
+		position: relative;
+		.card-img-container {
+			background-color: $img-bg;
+			display: flex;
+			align-items: center;
+			padding: 0 5rem;
+			.img-primary {
+			}
+		}
+		.card-info {
+			padding-left: 2rem;
+			.info-title {
+				font-family: 'Josefin Sans', sans-serif;
+				font-size: 3.6rem;
+			}
+			.item-price {
+				font-family: 'Josefin Sans', sans-serif;
+				font-size: 1.4rem;
+				font-weight: 400;
+				color: $text1;
+				margin: 0 0.5rem 1rem;
+			}
+			.promo-price {
+				color: $primary;
+				text-decoration: line-through;
+			}
+			.wishList-container {
+				margin: 1rem 0;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				span {
+					font-family: 'Josefin Sans', sans-serif;
+					font-size: 1.6rem;
+					color: #151875;
+				}
+				i {
+					margin-left: 1rem;
+					cursor: pointer;
+				}
+			}
+			.info-categories {
+				font-family: 'Josefin Sans', sans-serif;
+				font-size: 1.6rem;
+				color: #151875;
+			}
+			.social-icon-container {
+				display: flex;
+				margin-bottom: 2rem;
+				.social-icon {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background-color: $text1;
+					border-radius: 50%;
+					height: 3rem;
+					width: 3rem;
+					margin-top: 1rem;
+					margin-right: 0.5rem;
+					cursor: pointer;
+					i {
+						font-size: 1.6rem;
+					}
+				}
+			}
+			.itemDetail-description {
+				.description-title {
+					font-family: 'Josefin Sans', sans-serif;
+					font-size: 2.2rem;
+					color: #151875;
+				}
+				.description-text {
+					font-family: 'Josefin Sans', sans-serif;
+					font-size: 1.6rem;
+					color: #757793;
+				}
+			}
+		}
+		.close {
+			margin-left: 3rem;
+			cursor: pointer;
+
+			i {
+				color: $text1;
+				font-size: 1.2rem;
+			}
+		}
 	}
 }
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 1366px) {
-	.itemListContainer {
-		.itemListContainer-container {
-			grid-template-columns: 1fr 1fr 1fr;
-			width: 80%;
-		}
-	}
 }
 @media (max-width: 1024px) {
-	.itemListContainer {
-		grid-template-columns: 1fr 1fr;
-		width: 90%;
-		margin: 0 auto;
-		.itemListContainer-container {
-			grid-template-columns: 1fr 1fr;
-			width: 90%;
+	.itemDetail {
+		max-width: 80%;
+		.itemDetail-card {
+			flex-direction: column;
+
+			.card-img-container {
+				margin-bottom: 3rem;
+				justify-content: center;
+				padding: 2rem;
+				.img-primary {
+				}
+			}
+			.card-info {
+				padding-left: 0;
+				.info-title {
+					font-size: 2.6rem;
+				}
+				.item-price {
+				}
+				.promo-price {
+				}
+				.wishList-container {
+					span {
+					}
+					i {
+					}
+				}
+				.info-categories {
+				}
+				.social-icon-container {
+					.social-icon {
+						i {
+						}
+					}
+				}
+				.itemDetail-description {
+					.description-title {
+					}
+					.description-text {
+					}
+				}
+			}
+			.close {
+				position: absolute;
+				right: 3rem;
+				top: 3rem;
+				i {
+				}
+			}
 		}
 	}
 }
 @media (max-width: 768px) {
-	.itemListContainer {
-		.itemListContainer-container {
-			grid-template-columns: 1fr;
-			width: 100%;
+	.itemDetail {
+		max-width: 100%;
+		.itemDetail-card {
+			box-shadow: none;
+			margin: 0;
+			.card-img-container {
+				.img-primary {
+				}
+			}
+			.card-info {
+				.info-title {
+				}
+				.item-price {
+				}
+				.promo-price {
+				}
+				.wishList-container {
+					span {
+					}
+					i {
+					}
+				}
+				.info-categories {
+				}
+				.social-icon-container {
+					.social-icon {
+						i {
+						}
+					}
+				}
+				.itemDetail-description {
+					.description-title {
+					}
+					.description-text {
+					}
+				}
+			}
+			.close {
+				i {
+				}
+			}
 		}
 	}
 }

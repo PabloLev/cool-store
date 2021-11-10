@@ -20,7 +20,7 @@ function ItemDetailContainer() {
 				} else {
 					reject('No se encontró nada');
 				}
-			}, 2000);
+			}, 1000);
 		});
 
 	useEffect(() => {

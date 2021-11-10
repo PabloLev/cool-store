@@ -29,7 +29,9 @@ function ItemCount({ stock, initial, onAdd }) {
 				</button>
 			</div>
 
-			<button onClick={handleClick}>Finalizar compra</button>
+			<button className='button mb-6' onClick={handleClick}>
+				Add to cart
+			</button>
 		</>
 	);
 }

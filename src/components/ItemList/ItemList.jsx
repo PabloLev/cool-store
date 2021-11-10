@@ -16,7 +16,7 @@ function ItemList({ titulo, category }) {
 				} else {
 					reject('No se encontró nada');
 				}
-			}, 1500);
+			}, 1000);
 		});
 
 	useEffect(() => {

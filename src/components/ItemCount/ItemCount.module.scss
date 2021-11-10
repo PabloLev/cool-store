@@ -4,18 +4,22 @@
 	justify-content: space-between;
 	align-items: center;
 	background-color: $counter;
-	height: 1.5rem;
-	width: 5rem;
-	margin: 1rem 0;
+	height: 2, 55rem;
+	width: 10rem;
+	margin: 3rem 0;
 	.counterBtn {
-		height: 1.5rem;
-		width: 1.2rem;
-		background-color: $counter-btn;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 2.5rem;
+		width: 2.2rem;
+		background-color: darken($counter-btn, 10%);
 		border: none;
+		font-size: 1.6rem;
 	}
 	.counterValue {
-		font-size: 1.2rem;
-		line-height: 1.5rem;
+		font-size: 1.6rem;
+		line-height: 2.5rem;
 		color: $black;
 	}
 }
