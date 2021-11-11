@@ -4,6 +4,8 @@ import Rating from '../Rating/Rating';
 import { Link } from 'react-router-dom';
 
 function ItemDetail({
+	item,
+	id,
 	img,
 	category,
 	name,
@@ -38,9 +40,6 @@ function ItemDetail({
 					<div className='info-categories'>
 						<span>Categories: {category}</span>
 					</div>
-					{/* <div className='info-Tags'>
-						<span>Tags:</span>
-					</div> */}
 					<div className='social-icon-container'>
 						<div className='social-icon'>
 							<i className='icon-icon-facebook'></i>
@@ -52,27 +51,28 @@ function ItemDetail({
 							<i className='icon-icon-twitter'></i>
 						</div>
 					</div>
-
 					<div className='itemDetail-description mt-6'>
 						<h3 className='description-title'>Varius tempor</h3>
 						<p className='description-text mt-3'>{description}</p>
 					</div>
+
 					{!showCount ? (
 						<ItemCount
 							stock={stock}
 							initial={1}
 							onAdd={onAdd}
+							item={item}
 							showCount={showCount}
 						/>
 					) : (
 						<div className='mt-6 mb-6'>
 							<Link to='/cart'>
-								<button className='button me-3 mt-3'>
+								<button className='button me-6 mt-3'>
 									To check Out ({itemsInCart})
 								</button>
 							</Link>
 							<Link to={`/shop`}>
-								<button className='button ms-3 mt-3'>
+								<button className='button mt-3'>
 									Continue Shopping
 								</button>
 							</Link>

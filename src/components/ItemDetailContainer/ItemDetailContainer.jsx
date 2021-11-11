@@ -1,6 +1,6 @@
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemDetailContainer.scss';
-import Products from '../../data/ProductsLocal.json';
+import Products from '../../data/Products.json';
 import { useEffect, useState } from 'react';
 import Loader from '../Loader';
 import { useParams } from 'react-router';
@@ -43,6 +43,8 @@ function ItemDetailContainer() {
 			{itemDetail ? (
 				<ItemDetail
 					key={itemDetail.id}
+					item={itemDetail}
+					id={itemDetail.id}
 					img={itemDetail.img}
 					category={itemDetail.category}
 					name={itemDetail.name}
@@ -55,6 +57,21 @@ function ItemDetailContainer() {
 					itemsInCart={itemsInCart}
 				/>
 			) : (
+				// <ItemDetail
+				// 	key={itemDetail.id}
+				// 	item={itemDetail}
+				// 	id={itemDetail.id}
+				// 	img={itemDetail.img}
+				// 	category={itemDetail.category}
+				// 	name={itemDetail.name}
+				// 	description={itemDetail.description}
+				// 	price={itemDetail.price}
+				// 	priceSale={itemDetail.priceSale}
+				// 	stock={itemDetail.stock}
+				// 	onAdd={onAdd}
+				// 	showCount={showCount}
+				// 	itemsInCart={itemsInCart}
+				// />
 				<Loader />
 			)}
 		</div>

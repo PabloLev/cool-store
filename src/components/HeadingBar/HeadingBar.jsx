@@ -70,7 +70,7 @@ function HeadingBar() {
 						</li>
 					</ul>
 					<NavLink exact to='/cart'>
-						<CartWidget numberOfProducts={2} />
+						<CartWidget />
 					</NavLink>
 				</nav>
 			</div>

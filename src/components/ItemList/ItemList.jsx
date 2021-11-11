@@ -1,6 +1,6 @@
 import Item from '../Item';
 import { useEffect, useState } from 'react';
-import Products from '../../data/ProductsLocal.json';
+import Products from '../../data/Products.json';
 import Loader from '../Loader';
 import './ItemList.scss';
 import { NavLink } from 'react-router-dom';

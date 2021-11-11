@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import style from './ItemCount.module.scss';
+import { useContext } from 'react';
+import { CartContext } from '../../Context/cartContext';
 
-function ItemCount({ stock, initial, onAdd }) {
+function ItemCount({ stock, initial, onAdd, item }) {
 	const [counterValue, setCounterValue] = useState(initial);
+	const { addItem } = useContext(CartContext);
 	const sum = () => {
 		counterValue < stock
 			? setCounterValue(counterValue + 1)
@@ -16,7 +19,9 @@ function ItemCount({ stock, initial, onAdd }) {
 
 	const handleClick = () => {
 		onAdd(counterValue);
+		addItem(item, counterValue);
 	};
+
 	return (
 		<>
 			<div className={style.counter}>
