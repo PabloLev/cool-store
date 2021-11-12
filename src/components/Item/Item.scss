@@ -25,6 +25,25 @@
 		}
 		.item-img {
 		}
+		.discount {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			position: absolute;
+			font-family: 'Josefin Sans', sans-serif;
+			font-size: 1.5rem;
+			// line-height: 1.7rem;
+			font-weight: 700;
+			// padding: 1.6rem 4rem;
+			background-color: #00c1fe;
+			color: $white;
+			height: 5rem;
+			width: 5rem;
+			border-radius: 50%;
+			top: 1rem;
+			right: 1rem;
+		}
 		.item-icon-container {
 			display: flex;
 			flex-direction: column;

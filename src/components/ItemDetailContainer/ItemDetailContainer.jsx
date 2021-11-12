@@ -33,7 +33,6 @@ function ItemDetailContainer() {
 	}, [itemId]);
 
 	const onAdd = (items) => {
-		console.log(items);
 		setShowCount(!showCount);
 		setItemsInCart(items);
 	};
@@ -44,34 +43,11 @@ function ItemDetailContainer() {
 				<ItemDetail
 					key={itemDetail.id}
 					item={itemDetail}
-					id={itemDetail.id}
-					img={itemDetail.img}
-					category={itemDetail.category}
-					name={itemDetail.name}
-					description={itemDetail.description}
-					price={itemDetail.price}
-					priceSale={itemDetail.priceSale}
-					stock={itemDetail.stock}
 					onAdd={onAdd}
 					showCount={showCount}
 					itemsInCart={itemsInCart}
 				/>
 			) : (
-				// <ItemDetail
-				// 	key={itemDetail.id}
-				// 	item={itemDetail}
-				// 	id={itemDetail.id}
-				// 	img={itemDetail.img}
-				// 	category={itemDetail.category}
-				// 	name={itemDetail.name}
-				// 	description={itemDetail.description}
-				// 	price={itemDetail.price}
-				// 	priceSale={itemDetail.priceSale}
-				// 	stock={itemDetail.stock}
-				// 	onAdd={onAdd}
-				// 	showCount={showCount}
-				// 	itemsInCart={itemsInCart}
-				// />
 				<Loader />
 			)}
 		</div>

@@ -5,6 +5,12 @@ import { CartContext } from '../../Context/cartContext';
 
 function CartContainer() {
 	const { cart, removeItem, emptyCart } = useContext(CartContext);
+
+	const totalToPay = cart.reduce(
+		(total, item) =>
+			total + item.price * (1 - item.discount / 100) * item.counter,
+		0
+	);
 	return (
 		<section className='cartDetail'>
 			{cart.length ? (
@@ -24,14 +30,15 @@ function CartContainer() {
 						<div className='price-container'>
 							<div>
 								<span className='item-price'>
-									${(item.price * item.priceSale) / 100}
+									${item.price * (1 - item.discount / 100)}
 								</span>
 								<span className='item-price'>
 									x{item.counter}{' '}
 								</span>
 								<span className='item-price'>
 									$
-									{((item.price * item.priceSale) / 100) *
+									{item.price *
+										(1 - item.discount / 100) *
 										item.counter}
 								</span>
 							</div>
@@ -53,12 +60,15 @@ function CartContainer() {
 				</>
 			)}
 			{cart.length ? (
-				<button
-					onClick={() => emptyCart()}
-					className='button mt-6 mb-6'
-				>
-					Remove All
-				</button>
+				<>
+					<h1>TOTAL A PAGAR ${totalToPay}</h1>
+					<button
+						onClick={() => emptyCart()}
+						className='button mt-6 mb-6'
+					>
+						Remove All
+					</button>
+				</>
 			) : (
 				<Link to='/shop'>
 					<button className='button mt-6 mb-6'>Shop</button>

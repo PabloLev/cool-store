@@ -32,7 +32,7 @@ function ItemList({ titulo, category }) {
 			)
 			.catch((err) => console.log(err));
 	}, [category]);
-	console.log(products.length);
+
 	return (
 		<section className='itemListContainer'>
 			<h1 className='title'>{titulo}</h1>
@@ -66,17 +66,7 @@ function ItemList({ titulo, category }) {
 			<div className='itemListContainer-container'>
 				{products.length ? (
 					products.map((product) => (
-						<Item
-							key={product.id}
-							category={product.category}
-							id={product.id}
-							img={product.img}
-							name={product.name}
-							price={product.price}
-							priceSale={product.priceSale}
-							plusLink={product.plusLink}
-							stock={product.stock}
-						/>
+						<Item key={product.id} item={product} />
 					))
 				) : (
 					<Loader />

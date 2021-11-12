@@ -3,34 +3,33 @@ import ItemCount from '../ItemCount/ItemCount';
 import Rating from '../Rating/Rating';
 import { Link } from 'react-router-dom';
 
-function ItemDetail({
-	item,
-	id,
-	img,
-	category,
-	name,
-	description,
-	price,
-	priceSale,
-	stock,
-	onAdd,
-	showCount,
-	itemsInCart,
-}) {
+function ItemDetail({ item, onAdd, showCount, itemsInCart }) {
 	return (
 		<section className='itemDetail'>
 			<article className='itemDetail-card'>
 				<div className='card-img-container'>
-					<img className='img-primary' src={img} alt={name} />
+					<img
+						className='img-primary'
+						src={item.img}
+						alt={item.name}
+					/>
 				</div>
 				<div className='card-info'>
-					<h2 className='info-title'>{name}</h2>
+					<h2 className='info-title'>{item.name}</h2>
 					<Rating stars={4} />
 					<div>
-						<span className='item-price'>
-							${(price * priceSale) / 100}
-						</span>
-						<span className='item-price promo-price'>${price}</span>
+						{item.discount !== 0 ? (
+							<>
+								<span className='item-price'>
+									${item.price * (1 - item.discount / 100)}
+								</span>
+								<span className='item-price promo-price'>
+									${item.price}
+								</span>
+							</>
+						) : (
+							<span className='item-price'>${item.price}</span>
+						)}
 					</div>
 					<p className='info-description'></p>
 					<div className='wishList-container'>
@@ -38,7 +37,7 @@ function ItemDetail({
 						<i className='icon-icon-hart text-primary'></i>
 					</div>
 					<div className='info-categories'>
-						<span>Categories: {category}</span>
+						<span>Categories: {item.category}</span>
 					</div>
 					<div className='social-icon-container'>
 						<div className='social-icon'>
@@ -53,12 +52,14 @@ function ItemDetail({
 					</div>
 					<div className='itemDetail-description mt-6'>
 						<h3 className='description-title'>Varius tempor</h3>
-						<p className='description-text mt-3'>{description}</p>
+						<p className='description-text mt-3'>
+							{item.description}
+						</p>
 					</div>
 
 					{!showCount ? (
 						<ItemCount
-							stock={stock}
+							stock={item.stock}
 							initial={1}
 							onAdd={onAdd}
 							item={item}

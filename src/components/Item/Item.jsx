@@ -1,18 +1,31 @@
 import { Link } from 'react-router-dom';
 import Rating from '../Rating';
 import './Item.scss';
+import { useContext } from 'react';
+import { CartContext } from '../../Context/cartContext';
 
-function Item({ id, category, img, name, price, priceSale, plusLink, stock }) {
+function Item({ item }) {
+	const { addItem } = useContext(CartContext);
+	const handleClick = () => {
+		if (item.stock > 0) {
+			item.stock = item.stock - 1;
+			addItem(item, 1);
+		}
+		return console.log('Stock', item.stock);
+	};
 	return (
 		<article className='item'>
 			<div className='item-img-container'>
-				<img className='item-img' src={img} alt={name} />
+				{item.discount !== 0 && (
+					<span className='discount'>{item.discount}% off</span>
+				)}
+				<img className='item-img' src={item.img} alt={item.name} />
 				<div className='item-icon-container transition-all'>
 					<div className='icon-container pointer'>
-						<i className='icon-icon-cart'></i>
+						<i onClick={handleClick} className='icon-icon-cart'></i>
 					</div>
 					<div className='icon-container pointer'>
-						<Link to={`/item/${id}`}>
+						<Link to={`/item/${item.id}`}>
 							<i className='icon-icon-search-plus'></i>
 						</Link>
 					</div>
@@ -21,10 +34,10 @@ function Item({ id, category, img, name, price, priceSale, plusLink, stock }) {
 					</div>
 				</div>
 			</div>
-			<h3 className='item-title'>{name}</h3>
+			<h3 className='item-title'>{item.name}</h3>
 
 			<Rating />
-			<span className='text-uppercase'>{category}</span>
+			<span className='text-uppercase'>{item.category}</span>
 			<div className='color-icons'>
 				<i className='icon-color icon-yellow'></i>
 				<i className='icon-color icon-pink'></i>
@@ -32,8 +45,18 @@ function Item({ id, category, img, name, price, priceSale, plusLink, stock }) {
 			</div>
 
 			<div>
-				<span className='item-price'>${(price * priceSale) / 100}</span>
-				<span className='item-price promo-price'>${price}</span>
+				{item.discount !== 0 ? (
+					<>
+						<span className='item-price'>
+							${item.price * (1 - item.discount / 100)}
+						</span>
+						<span className='item-price promo-price'>
+							${item.price}
+						</span>
+					</>
+				) : (
+					<span className='item-price'>${item.price}</span>
+				)}
 			</div>
 		</article>
 	);
