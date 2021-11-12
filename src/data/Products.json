@@ -7,7 +7,7 @@
 		"rating": 4,
 		"price": 9500,
 		"discount": 0,
-		"stock": 3,
+		"stock": 40,
 		"plusLink": "/#",
 		"img": "https://raw.githubusercontent.com/PabloLev/cool-store/master/public/assets/img/items/item1.png"
 	},

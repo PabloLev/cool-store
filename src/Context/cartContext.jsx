@@ -28,8 +28,19 @@ export const CartProvider = ({ children }) => {
 		setCart([]);
 	};
 
+	const updateItemsInCart = (item) => {
+		if (item !== undefined) {
+			if (item.stock > 0) {
+				item.stock = item.stock - 1;
+				addItem(item, 1);
+			}
+			return console.log('Stock', item.stock);
+		}
+	};
 	return (
-		<CartContext.Provider value={{ cart, addItem, removeItem, emptyCart }}>
+		<CartContext.Provider
+			value={{ cart, addItem, removeItem, emptyCart, updateItemsInCart }}
+		>
 			{children}
 		</CartContext.Provider>
 	);

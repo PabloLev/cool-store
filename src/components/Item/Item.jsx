@@ -1,18 +1,22 @@
 import { Link } from 'react-router-dom';
 import Rating from '../Rating';
 import './Item.scss';
-import { useContext } from 'react';
+import { useContext, useEffect, useCallback } from 'react';
 import { CartContext } from '../../Context/cartContext';
 
 function Item({ item }) {
-	const { addItem } = useContext(CartContext);
-	const handleClick = () => {
-		if (item.stock > 0) {
-			item.stock = item.stock - 1;
-			addItem(item, 1);
-		}
-		return console.log('Stock', item.stock);
-	};
+	const { updateItemsInCart } = useContext(CartContext);
+
+	const innerFunction = useCallback(
+		(data) => {
+			updateItemsInCart(data);
+		},
+		[updateItemsInCart]
+	);
+	useEffect(() => {
+		innerFunction();
+	}, [innerFunction]);
+
 	return (
 		<article className='item'>
 			<div className='item-img-container'>
@@ -22,7 +26,10 @@ function Item({ item }) {
 				<img className='item-img' src={item.img} alt={item.name} />
 				<div className='item-icon-container transition-all'>
 					<div className='icon-container pointer'>
-						<i onClick={handleClick} className='icon-icon-cart'></i>
+						<i
+							onClick={() => innerFunction(item)}
+							className='icon-icon-cart'
+						></i>
 					</div>
 					<div className='icon-container pointer'>
 						<Link to={`/item/${item.id}`}>
