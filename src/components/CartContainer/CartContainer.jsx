@@ -2,15 +2,13 @@ import './CartContainer.scss';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../../Context/cartContext';
-
+import ItemCount from '../ItemCount/ItemCount';
 function CartContainer() {
 	const { cart, removeItem, emptyCart } = useContext(CartContext);
 
-	const totalToPay = cart.reduce(
-		(total, item) =>
-			total + item.price * (1 - item.discount / 100) * item.counter,
-		0
-	);
+	const totalToPay = cart.reduce((total, item) => {
+		return total + item.price * (1 - item.discount / 100) * item.counter;
+	}, 0);
 	return (
 		<section className='cartDetail'>
 			{cart.length ? (
@@ -32,6 +30,12 @@ function CartContainer() {
 								<span className='item-price'>
 									${item.price * (1 - item.discount / 100)}
 								</span>
+								<ItemCount
+									stock={item.stock}
+									initial={item.counter}
+									item={item}
+									showBtn={false}
+								/>
 								<span className='item-price'>
 									x{item.counter}{' '}
 								</span>

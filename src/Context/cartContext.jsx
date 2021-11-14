@@ -9,13 +9,17 @@ export const CartProvider = ({ children }) => {
 		//Si no está en el carrito lo agrego
 		const newItem = { ...item, counter: quantity };
 		const isInCart = cart.some((product) => product.id === item.id);
-		if (!isInCart) {
-			setCart([...cart, newItem]);
-		} else {
-			const foundedItem = cart.find((product) => product.id === item.id);
-			foundedItem.counter = foundedItem.counter + quantity;
+		if (item.stock > 0) {
+			if (!isInCart) {
+				setCart([...cart, newItem]);
+			} else {
+				const foundedItem = cart.find(
+					(product) => product.id === item.id
+				);
+				foundedItem.counter = foundedItem.counter + quantity;
+				setCart([...cart]);
+			}
 		}
-		return;
 	};
 
 	const removeItem = (id) => {
@@ -28,14 +32,11 @@ export const CartProvider = ({ children }) => {
 		setCart([]);
 	};
 
-	const updateItemsInCart = (item) => {
-		if (item !== undefined) {
-			if (item.stock > 0) {
-				item.stock = item.stock - 1;
-				addItem(item, 1);
-			}
-			return console.log('Stock', item.stock);
+	const updateItemsInCart = (item, num) => {
+		if (item.stock > 0) {
+			item.stock = item.stock + num;
 		}
+		return console.log('Stock', item.stock);
 	};
 	return (
 		<CartContext.Provider

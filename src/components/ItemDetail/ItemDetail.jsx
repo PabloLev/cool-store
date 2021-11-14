@@ -57,27 +57,30 @@ function ItemDetail({ item, onAdd, showCount, itemsInCart }) {
 						</p>
 					</div>
 
-					{!showCount ? (
-						<ItemCount
-							stock={item.stock}
-							initial={1}
-							onAdd={onAdd}
-							item={item}
-							showCount={showCount}
-						/>
+					{item.stock > 0 ? (
+						!showCount ? (
+							<ItemCount initial={1} onAdd={onAdd} item={item} />
+						) : (
+							<div className='mt-6 mb-6'>
+								<Link to='/cart'>
+									<button className='button me-6 mt-3'>
+										To check Out ({itemsInCart})
+									</button>
+								</Link>
+								<Link to={`/shop`}>
+									<button className='button mt-3'>
+										Continue Shopping
+									</button>
+								</Link>
+							</div>
+						)
 					) : (
-						<div className='mt-6 mb-6'>
-							<Link to='/cart'>
-								<button className='button me-6 mt-3'>
-									To check Out ({itemsInCart})
-								</button>
-							</Link>
+						<>
+							<h1>Out of stock</h1>
 							<Link to={`/shop`}>
-								<button className='button mt-3'>
-									Continue Shopping
-								</button>
+								<button className='button mt-3'>To shop</button>
 							</Link>
-						</div>
+						</>
 					)}
 				</div>
 				<Link className='close' to='/shop'>
