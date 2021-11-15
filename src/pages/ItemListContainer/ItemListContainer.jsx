@@ -1,4 +1,4 @@
-import ItemList from '../ItemList/ItemList';
+import ItemList from '../../components/ItemList/ItemList';
 import { useParams } from 'react-router';
 import { useEffect, useState } from 'react';
 // import Products from '../../data/Products.json';

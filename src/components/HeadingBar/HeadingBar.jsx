@@ -26,37 +26,6 @@ function HeadingBar() {
 					</label>
 					<ul className='heading-navbar'>
 						<li className='heading-navbar-item'>
-							<span className='navbar-link me-2 pointer'>
-								English
-								<i className='icon-icon-chev-down ms-1'></i>
-							</span>
-							<ul className='heading-dropdown'>
-								<li>
-									<a href='/#'>Español </a>
-								</li>
-								<li>
-									<a href='/#'>Portugués</a>
-								</li>
-							</ul>
-						</li>
-						<li className='heading-navbar-item'>
-							<span
-								className='navbar-link me-2 pointer'
-								href='/#'
-							>
-								USD
-								<i className='icon-icon-chev-down ms-1'></i>
-							</span>
-							<ul className='heading-dropdown'>
-								<li>
-									<a href='/#'>ARG </a>
-								</li>
-								<li>
-									<a href='/#'>UYU</a>
-								</li>
-							</ul>
-						</li>
-						<li className='heading-navbar-item'>
 							<a className='navbar-link me-2' href='/#'>
 								Login
 								<i className='icon-icon-user ms-1'></i>

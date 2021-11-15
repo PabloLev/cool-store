@@ -77,6 +77,11 @@ function ItemDetail({ item, onAdd, showCount, itemsInCart }) {
 					) : (
 						<>
 							<h1>Out of stock</h1>
+							<Link to={`/cart`}>
+								<button className='button mt-3 me-6'>
+									To check Out ({itemsInCart})
+								</button>
+							</Link>
 							<Link to={`/shop`}>
 								<button className='button mt-3'>To shop</button>
 							</Link>

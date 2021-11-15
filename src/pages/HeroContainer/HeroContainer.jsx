@@ -1,5 +1,4 @@
-// import './Hero.scss';
-import SimpleSlider from '../SimpleSlider/SimpleSlider';
+import SimpleSlider from '../../components/SimpleSlider/SimpleSlider';
 
 function Hero() {
 	return (
