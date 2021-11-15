@@ -1,5 +1,3 @@
-import './Contact.scss';
-
 function Contact() {
 	return (
 		<section className='itemDetail'>

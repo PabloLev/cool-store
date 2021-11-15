@@ -32,6 +32,15 @@ function ItemList({ titulo, category, products }) {
 						house
 					</span>
 				</NavLink>
+				<NavLink
+					activeClassName='active'
+					key='test'
+					to={`/category/test`}
+				>
+					<span className='ms-2 me-2 text-uppercase pointer'>
+						test
+					</span>
+				</NavLink>
 			</nav>
 
 			<div className='itemListContainer-container'>

@@ -1,6 +1,6 @@
 import SimpleSlider from '../../components/SimpleSlider/SimpleSlider';
 
-function Hero() {
+function HeroContainer() {
 	return (
 		<div className='hero'>
 			<SimpleSlider />
@@ -8,4 +8,4 @@ function Hero() {
 	);
 }
 
-export default Hero;
+export default HeroContainer;

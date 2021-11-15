@@ -1,12 +1,12 @@
 import './scss/App.scss';
 import Header from './components/Header';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import Hero from './components/Hero/Hero';
+import ItemListContainer from './pages/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer';
+import HeroContainer from './pages/HeroContainer/HeroContainer';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import CartContainer from './components/CartContainer';
-import Contact from './components/Contact/Contact';
+import CartContainer from './pages/CartContainer';
+import Contact from './pages/ContactContainer/ContactContainer';
 import { CartProvider } from './Context/cartContext';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
 				<Header />
 				<Switch>
 					<Route exact path='/'>
-						<Hero />
+						<HeroContainer />
 					</Route>
 					<Route exact path='/category/:categoryId'>
 						<main className='main-container'>
