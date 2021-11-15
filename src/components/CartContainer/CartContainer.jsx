@@ -9,6 +9,7 @@ function CartContainer() {
 	const totalToPay = cart.reduce((total, item) => {
 		return total + item.price * (1 - item.discount / 100) * item.counter;
 	}, 0);
+	console.log('Cart en container', cart);
 	return (
 		<section className='cartDetail'>
 			{cart.length ? (
@@ -23,6 +24,7 @@ function CartContainer() {
 								/>
 							</div>
 							<h2 className='info-title ms-3'>{item.name}</h2>
+							<h2 className='ms-6'>Stock: {item.stock}</h2>
 						</div>
 
 						<div className='price-container'>
@@ -31,7 +33,6 @@ function CartContainer() {
 									${item.price * (1 - item.discount / 100)}
 								</span>
 								<ItemCount
-									stock={item.stock}
 									initial={item.counter}
 									item={item}
 									showBtn={false}

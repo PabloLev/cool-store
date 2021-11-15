@@ -59,7 +59,7 @@ function ItemDetail({ item, onAdd, showCount, itemsInCart }) {
 
 					{item.stock > 0 ? (
 						!showCount ? (
-							<ItemCount initial={1} onAdd={onAdd} item={item} />
+							<ItemCount initial={0} onAdd={onAdd} item={item} />
 						) : (
 							<div className='mt-6 mb-6'>
 								<Link to='/cart'>

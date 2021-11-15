@@ -5,45 +5,40 @@ import { CartContext } from '../../Context/cartContext';
 
 function ItemCount({ initial, item, onAdd = null, showBtn = true }) {
 	const [counterValue, setCounterValue] = useState(initial);
-	const { addItem, updateItemsInCart } = useContext(CartContext);
+	const { addItem } = useContext(CartContext);
 
 	const sum = () => {
-		if (counterValue < item.stock) {
-			setCounterValue(counterValue + 1);
-			if (!showBtn) {
+		if (showBtn) {
+			console.log('showBtn = True');
+			if (counterValue < item.stock) {
+				console.log('stock', item.stock);
+				console.log('counter', counterValue);
+				setCounterValue(counterValue + 1);
+			} else {
+				console.log('NO MORE STOCK!!!');
+			}
+		} else {
+			console.log('showBtn = False');
+			if (item.stock > 0) {
+				console.log('stock', item.stock);
+				console.log('counter', counterValue);
+				setCounterValue(counterValue + 1);
 				addItem(item, 1);
-				updateItemsInCart(item, -1);
+			} else {
+				console.log('NO MORE STOCK!!!');
 			}
 		}
-		// else {
-		// 	console.log('No hay stock');
-		// }
-		// counterValue < stock
-		// 	? setCounterValue(counterValue + 1)
-		// 	: console.log('No hay stock');
-		// if (!showBtn) {
-		// 	addItem(item, 1);
-		// }
 	};
 	const substract = () => {
 		if (counterValue > 0) {
+			console.log('stock', item.stock);
+			console.log('counter', counterValue);
 			setCounterValue(counterValue - 1);
+
 			if (!showBtn) {
 				addItem(item, -1);
-				updateItemsInCart(item, 1);
-				// updateItemsInCart(item);
 			}
 		}
-		// else {
-		// 	console.log('El número debe ser mayor a cero');
-		// }
-		// counterValue > 0
-		// 	? setCounterValue(counterValue - 1)
-		// 	: console.log('El número debe ser mayor a cero');
-
-		// if (!showBtn) {
-		// 	addItem(item, -1);
-		// }
 	};
 
 	const handleClick = () => {

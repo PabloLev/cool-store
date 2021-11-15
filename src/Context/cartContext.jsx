@@ -4,19 +4,27 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
 	const [cart, setCart] = useState([]);
 	// console.log('cart', cart);
-
+	const updateItemsInCart = (item, num) => {
+		item.stock = item.stock + num;
+	};
 	const addItem = (item, quantity) => {
-		//Si no está en el carrito lo agrego
-		const newItem = { ...item, counter: quantity };
 		const isInCart = cart.some((product) => product.id === item.id);
-		if (item.stock > 0) {
+		if (item.stock >= 0) {
 			if (!isInCart) {
+				item.stock = item.stock - quantity;
+				const newItem = {
+					...item,
+					stock: item.stock,
+					counter: quantity,
+				};
+
 				setCart([...cart, newItem]);
 			} else {
 				const foundedItem = cart.find(
 					(product) => product.id === item.id
 				);
 				foundedItem.counter = foundedItem.counter + quantity;
+				foundedItem.stock = foundedItem.stock - quantity;
 				setCart([...cart]);
 			}
 		}
@@ -24,6 +32,9 @@ export const CartProvider = ({ children }) => {
 
 	const removeItem = (id) => {
 		//Filtro todos los que no coinciden con el id, eliminando el del id correspondiente
+		// const findedItem = cart.find((item) => (item.id = id));
+		// findedItem.stock = findedItem.stock + findedItem.count;
+		// setCart([...cart]);
 		setCart(cart.filter((item) => item.id !== id));
 	};
 
@@ -32,12 +43,6 @@ export const CartProvider = ({ children }) => {
 		setCart([]);
 	};
 
-	const updateItemsInCart = (item, num) => {
-		if (item.stock > 0) {
-			item.stock = item.stock + num;
-		}
-		return console.log('Stock', item.stock);
-	};
 	return (
 		<CartContext.Provider
 			value={{ cart, addItem, removeItem, emptyCart, updateItemsInCart }}
