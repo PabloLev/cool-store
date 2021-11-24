@@ -13,11 +13,7 @@ function CartContainer() {
 		<section className='cartDetail'>
 			<h1 className='title'>Cart</h1>
 			{cart.length ? (
-				cart.map((item) => (
-					<>
-						<Cart key={item.id} item={item} />
-					</>
-				))
+				cart.map((item) => <Cart key={item.id} item={item} />)
 			) : (
 				<>
 					<h1>No Products</h1>
@@ -35,14 +31,10 @@ function CartContainer() {
 					</button>
 					<h1 className='to-right'>Total to pay = ${totalToPay}</h1>
 					<div className='full-width flex-space-between ms-6 me-6'>
-						<Link
-							exact
-							to='/shop'
-							className='button mt-6 mb-6 btn-link'
-						>
+						<Link to='/shop' className='button mt-6 mb-6 btn-link'>
 							Continue shopping
 						</Link>
-						<Link exact to='/checkout' className='button mt-6 mb-6'>
+						<Link to='/checkout' className='button mt-6 mb-6'>
 							Check Out
 						</Link>
 					</div>

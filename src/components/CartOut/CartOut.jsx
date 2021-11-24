@@ -1,9 +1,6 @@
 import "./CartOut.scss";
-import ItemCount from "../ItemCount/ItemCount";
-import { useContext } from "react";
-import { CartContext } from "../../Context/cartContext";
+
 function Cart({ item }) {
-	const { removeItem } = useContext(CartContext);
 	return (
 		<article key={item.id} className='cartDetail-card'>
 			<div className='cardImg-Title'>
