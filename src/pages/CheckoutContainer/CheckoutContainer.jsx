@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../Context/cartContext";
-import Cart from "../../components/Cart/Cart";
-function CartContainer() {
-	const { cart, emptyCart } = useContext(CartContext);
+import CartOut from "../../components/CartOut/CartOut";
+function CheckoutContainer() {
+	const { cart } = useContext(CartContext);
 
 	const totalToPay = cart.reduce((total, item) => {
 		return total + item.price * (1 - item.discount / 100) * item.counter;
 	}, 0);
 
 	return (
-		<section className='cartDetail'>
-			<h1 className='title'>Cart</h1>
+		<section className='cartOutDetail'>
+			<h1 className='title'>Check Out</h1>
 			{cart.length ? (
 				cart.map((item) => (
 					<>
-						<Cart key={item.id} item={item} />
+						<CartOut key={item.id} item={item} />
 					</>
 				))
 			) : (
@@ -27,23 +27,43 @@ function CartContainer() {
 
 			{cart.length ? (
 				<>
-					<button
-						onClick={() => emptyCart()}
-						className='button mt-6 mb-6 btn-link to-right'
-					>
-						Remove All
-					</button>
+					<h2 className='finish-text'>
+						Please complete the form to finish your purchase.
+					</h2>
+					<form className='form-checkout' action=''>
+						<input
+							className='line-input'
+							type='text'
+							placeholder='First Name'
+						/>
+						<input
+							className='line-input'
+							type='text'
+							placeholder='Surname'
+						/>
+
+						<input
+							className='line-input'
+							type='text'
+							placeholder='City'
+						/>
+						<input
+							className='line-input'
+							type='text'
+							placeholder='Adress'
+						/>
+					</form>
 					<h1 className='to-right'>Total to pay = ${totalToPay}</h1>
 					<div className='full-width flex-space-between ms-6 me-6'>
 						<Link
 							exact
-							to='/shop'
+							to='/cart'
 							className='button mt-6 mb-6 btn-link'
 						>
-							Continue shopping
+							Modify
 						</Link>
 						<Link exact to='/checkout' className='button mt-6 mb-6'>
-							Check Out
+							Finish
 						</Link>
 					</div>
 				</>
@@ -56,4 +76,4 @@ function CartContainer() {
 	);
 }
 
-export default CartContainer;
+export default CheckoutContainer;

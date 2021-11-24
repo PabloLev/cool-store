@@ -1,4 +1,4 @@
-import "./Cart.scss";
+import "./CartOut.scss";
 import ItemCount from "../ItemCount/ItemCount";
 import { useContext } from "react";
 import { CartContext } from "../../Context/cartContext";
@@ -15,7 +15,6 @@ function Cart({ item }) {
 					/>
 				</div>
 				<h2 className='info-title ms-3'>{item.name}</h2>
-				<h2 className='ms-6 stock'>Stock: {item.stock}</h2>
 			</div>
 
 			<div className='price-container'>
@@ -23,23 +22,11 @@ function Cart({ item }) {
 					<span className='item-price'>
 						${item.price * (1 - item.discount / 100)}
 					</span>
-					<ItemCount
-						initial={item.counter}
-						item={item}
-						showBtn={false}
-					/>
-					{/* <span className='item-price'>x{item.counter} </span> */}
+
+					<span className='item-price'>x{item.counter} =</span>
 					<span className='item-price'>
 						${item.price * (1 - item.discount / 100) * item.counter}
 					</span>
-				</div>
-
-				<div
-					onClick={() => removeItem(item.id)}
-					className='close'
-					to='/shop'
-				>
-					<i className='icon-icon-cross'></i>
 				</div>
 			</div>
 		</article>

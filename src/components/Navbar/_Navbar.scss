@@ -19,8 +19,11 @@
 		.navigation {
 			display: flex;
 			align-items: center;
+			justify-content: space-between;
+			width: 100%;
 			.nav-links {
 				height: 100%;
+
 				.menu-ckeckbox {
 					display: none;
 				}
@@ -37,9 +40,9 @@
 					}
 					.nav-item {
 						position: relative;
-						margin-right: 3.5rem;
+						margin-left: 3.5rem;
 						a {
-							font-family: 'Lato', sans-serif;
+							font-family: "Lato", sans-serif;
 							color: $black;
 							&:hover {
 								color: $primary;

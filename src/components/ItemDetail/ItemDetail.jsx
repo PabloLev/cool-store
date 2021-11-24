@@ -1,4 +1,4 @@
-import './ItemDetail.scss';
+// import './ItemDetail.scss';
 import ItemCount from '../ItemCount/ItemCount';
 import Rating from '../Rating/Rating';
 import { Link } from 'react-router-dom';

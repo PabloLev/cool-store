@@ -1,64 +1,67 @@
-@import './variables';
-@import './normalize';
-@import '../components/Header/Header';
-@import '../components/Navbar/Navbar';
-@import '../components/HeadingBar/HeadingBar';
+@import "./variables";
+@import "./normalize";
+@import "../components/Header/Header";
+@import "../components/Navbar/Navbar";
+@import "../components/HeadingBar/HeadingBar";
+@import "../components/ItemDetail/ItemDetail";
+@import "../components/Cart/Cart";
+// @import '../components/Cart/Cart';
 
 //ICONMOON
 
 .icon-icon-star:before {
-	content: '\e904';
+	content: "\e904";
 }
 .icon-icon-chev-down:before {
-	content: '\e900';
+	content: "\e900";
 }
 .icon-icon-calendar:before {
-	content: '\e901';
+	content: "\e901";
 }
 .icon-icon-cart:before {
-	content: '\e902';
+	content: "\e902";
 }
 .icon-icon-check:before {
-	content: '\e903';
+	content: "\e903";
 }
 .icon-icon-dot:before {
-	content: '\e906';
+	content: "\e906";
 }
 .icon-icon-facebook:before {
-	content: '\e907';
+	content: "\e907";
 }
 .icon-icon-feather:before {
-	content: '\e908';
+	content: "\e908";
 }
 .icon-icon-hart:before {
-	content: '\e909';
+	content: "\e909";
 }
 .icon-icon-instagram:before {
-	content: '\e90a';
+	content: "\e90a";
 }
 .icon-icon-mail:before {
-	content: '\e90b';
+	content: "\e90b";
 }
 .icon-icon-message:before {
-	content: '\e90c';
+	content: "\e90c";
 }
 .icon-icon-phone:before {
-	content: '\e90d';
+	content: "\e90d";
 }
 .icon-icon-search-plus:before {
-	content: '\e90e';
+	content: "\e90e";
 }
 .icon-icon-search:before {
-	content: '\e90f';
+	content: "\e90f";
 }
 .icon-icon-twitter:before {
-	content: '\e910';
+	content: "\e910";
 }
 .icon-icon-user:before {
-	content: '\e911';
+	content: "\e911";
 }
 .icon-icon-cross:before {
-	content: '\ea0f';
+	content: "\ea0f";
 }
 
 i {
@@ -306,16 +309,58 @@ i {
 	color: $primary !important;
 }
 
-//Buttons
+//Wifth
+.full-width {
+	width: 100%;
+}
+//FLEX
+.flex-space-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+//BTN
 .button {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	font-size: 1.7rem;
 	font-weight: 600;
 	padding: 1.6rem 4rem;
-	border: none;
 	background-color: #fb2e86;
 	color: #ffffff;
-	border-radius: 0.2 rem;
+	border-radius: 0.3rem;
 	transition: all 0.3s;
 	cursor: pointer;
+	border: 2px solid transparent;
+	&:hover {
+		background-color: transparent;
+		color: $primary;
+		border: 2px solid $primary;
+	}
+}
+.btn-secondary {
+	background-color: transparent;
+	border: 2px solid $primary;
+	color: $primary;
+	&:hover {
+		background-color: $primary;
+		color: $white;
+	}
+}
+.btn-link {
+	background-color: transparent;
+	color: $primary;
+	padding: 0;
+	margin: 0;
+	&:hover {
+		color: darken($primary, 25%);
+		border: 2px solid transparent;
+	}
+}
+
+//Layout
+.to-right {
+	margin-left: auto;
+}
+.to-left {
+	margin-right: auto;
 }

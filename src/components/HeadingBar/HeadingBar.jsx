@@ -1,6 +1,6 @@
-import CartWidget from '../CartWidget/CartWidget';
+import CartWidget from "../CartWidget/CartWidget";
 // import './HeadingBar.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 function HeadingBar() {
 	return (
@@ -24,7 +24,7 @@ function HeadingBar() {
 					>
 						<i className='icon-icon-chev-down ms-1'></i>
 					</label>
-					<ul className='heading-navbar'>
+					{/* <ul className='heading-navbar'>
 						<li className='heading-navbar-item'>
 							<a className='navbar-link me-2' href='/#'>
 								Login
@@ -37,7 +37,7 @@ function HeadingBar() {
 								<i className='icon-icon-hart ms-1'></i>
 							</a>
 						</li>
-					</ul>
+					</ul> */}
 					<NavLink exact to='/cart'>
 						<CartWidget />
 					</NavLink>

@@ -1,6 +1,6 @@
-import Logo from '../Logo/Logo';
+import Logo from "../Logo/Logo";
 // import './Navbar.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
 	return (
@@ -36,7 +36,7 @@ function Navbar() {
 									Shop
 								</NavLink>
 							</li>
-							<li className='nav-item'>
+							{/* <li className='nav-item'>
 								<NavLink
 									activeClassName='active'
 									exact
@@ -44,11 +44,11 @@ function Navbar() {
 								>
 									Contact
 								</NavLink>
-							</li>
+							</li> */}
 						</div>
 					</ul>
 				</div>
-				<div className='search-container'>
+				{/* <div className='search-container'>
 					<form className='search' action=''>
 						<input
 							className='search-input'
@@ -57,11 +57,10 @@ function Navbar() {
 							name='search'
 						/>
 						<button className='search-btn' type='submit'>
-							{/* <i className="icon-search"></i> */}
 							<i className='icon-icon-search'></i>
 						</button>
 					</form>
-				</div>
+				</div> */}
 			</div>
 		</nav>
 	);

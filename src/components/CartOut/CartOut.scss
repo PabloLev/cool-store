@@ -1,45 +1,85 @@
-@import '../../scss/variables.scss';
-.itemDetail {
+@import "../../scss/variables.scss";
+.cartOutDetail {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 	max-width: 63%;
-	.itemDetail-card {
-		padding: 2rem;
-		margin: 5rem 0;
-		box-shadow: 0rem 0rem 2.5rem 1rem #f6f4fd;
+	margin: 0 auto;
+	min-height: 40vh;
+	.title {
+		margin: 3rem 0;
+		font-family: "Josefin Sans", sans-serif;
+		font-size: 5rem;
+		font-weight: 700;
+		color: #0d0e43;
+	}
+
+	.cartDetail-card {
 		display: flex;
-		justify-content: flex-start;
-		position: relative;
-		.card-img-container {
-			background-color: $img-bg;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0;
+		margin: 0;
+
+		border-bottom: 1px solid $light-grey;
+		height: 8rem;
+		width: 100%;
+
+		.cardImg-Title {
 			display: flex;
 			align-items: center;
-			padding: 0 5rem;
-			.img-primary {
+
+			.card-img-container {
+				// background-color: $img-bg;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				// padding: 0 5rem;
+				height: 5rem;
+				width: 5rem;
+				.img-primary {
+					height: 100%;
+					width: auto;
+				}
+			}
+			.info-title {
+				font-family: "Josefin Sans", sans-serif;
+				font-size: 2rem;
 			}
 		}
+
+		.price-container {
+			display: flex;
+			.price {
+				display: flex;
+				flex: 1;
+				align-items: center;
+				justify-content: space-between;
+				.item-price {
+					font-family: "Josefin Sans", sans-serif;
+					font-size: 1.4rem;
+					font-weight: 400;
+					color: $text1;
+					margin: 0 0 0 1rem;
+				}
+				.promo-price {
+					color: $primary;
+					text-decoration: line-through;
+				}
+			}
+		}
+
 		.card-info {
 			padding-left: 2rem;
-			.info-title {
-				font-family: 'Josefin Sans', sans-serif;
-				font-size: 3.6rem;
-			}
-			.item-price {
-				font-family: 'Josefin Sans', sans-serif;
-				font-size: 1.4rem;
-				font-weight: 400;
-				color: $text1;
-				margin: 0 0.5rem 1rem;
-			}
-			.promo-price {
-				color: $primary;
-				text-decoration: line-through;
-			}
+
 			.wishList-container {
 				margin: 1rem 0;
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
 				span {
-					font-family: 'Josefin Sans', sans-serif;
+					font-family: "Josefin Sans", sans-serif;
 					font-size: 1.6rem;
 					color: #151875;
 				}
@@ -49,7 +89,7 @@
 				}
 			}
 			.info-categories {
-				font-family: 'Josefin Sans', sans-serif;
+				font-family: "Josefin Sans", sans-serif;
 				font-size: 1.6rem;
 				color: #151875;
 			}
@@ -74,19 +114,19 @@
 			}
 			.itemDetail-description {
 				.description-title {
-					font-family: 'Josefin Sans', sans-serif;
+					font-family: "Josefin Sans", sans-serif;
 					font-size: 2.2rem;
 					color: #151875;
 				}
 				.description-text {
-					font-family: 'Josefin Sans', sans-serif;
+					font-family: "Josefin Sans", sans-serif;
 					font-size: 1.6rem;
 					color: #757793;
 				}
 			}
 		}
 		.close {
-			margin-left: 3rem;
+			// margin-left: 3rem;
 			cursor: pointer;
 
 			i {
@@ -95,6 +135,34 @@
 			}
 		}
 	}
+	.finish-text {
+		margin: 7rem 0 0;
+		font-size: 2.2rem;
+		font-weight: 300;
+		color: $black;
+	}
+	.form-checkout {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 2rem;
+		width: 100%;
+		.line-input {
+			border: none;
+			border-bottom: 1px solid $light-grey;
+			margin: 3rem 0 0;
+			font-size: 1.6rem;
+			color: $black;
+			padding: 3rem 0 0.5rem;
+			&:focus-visible {
+				outline: none;
+				border-color: $black;
+			}
+		}
+	}
+
+	// .btn-link {
+	// 	margin: 1rem 0 1rem auto;
+	// }
 }
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 1366px) {
