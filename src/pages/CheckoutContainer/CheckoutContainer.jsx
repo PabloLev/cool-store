@@ -32,20 +32,25 @@ function CheckoutContainer() {
 					</h2>
 					<form className='form-checkout' action=''>
 						<input
-							className='line-input'
+							className='line-input half'
 							type='text'
 							placeholder='First Name'
 						/>
 						<input
-							className='line-input'
+							className='line-input half fix-margin'
 							type='text'
 							placeholder='Surname'
 						/>
 
 						<input
-							className='line-input'
+							className='line-input half'
 							type='text'
 							placeholder='City'
+						/>
+						<input
+							className='line-input half fix-margin'
+							type='number'
+							placeholder='Zip code'
 						/>
 						<input
 							className='line-input'

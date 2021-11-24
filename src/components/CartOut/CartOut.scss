@@ -143,10 +143,13 @@
 	}
 	.form-checkout {
 		display: flex;
-		flex-direction: column;
+		// flex-direction: column;
+		flex-wrap: wrap;
 		margin: 0 0 2rem;
 		width: 100%;
+
 		.line-input {
+			width: 100%;
 			border: none;
 			border-bottom: 1px solid $light-grey;
 			margin: 3rem 0 0;
@@ -157,6 +160,30 @@
 				outline: none;
 				border-color: $black;
 			}
+		}
+		.half {
+			width: 47.5%;
+			margin-right: 2.5%;
+			@media (max-width: 768px) {
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+		.fix-margin {
+			margin-right: 0;
+			margin-left: 2.5%;
+			@media (max-width: 768px) {
+				margin-left: 0;
+			}
+		}
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+		}
+
+		/* Firefox */
+		input[type="number"] {
+			-moz-appearance: textfield;
 		}
 	}
 
