@@ -1,3 +1,3 @@
-import Cart from './Cart';
+import CartOut from "./CartOut";
 
-export default Cart;
+export default CartOut;

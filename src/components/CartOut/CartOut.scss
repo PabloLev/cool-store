@@ -7,6 +7,13 @@
 	max-width: 63%;
 	margin: 0 auto;
 	min-height: 40vh;
+	@media (max-width: 1024px) {
+		max-width: 80%;
+	}
+	@media (max-width: 576px) {
+		max-width: 100%;
+		margin: 0 2rem;
+	}
 	.title {
 		margin: 3rem 0;
 		font-family: "Josefin Sans", sans-serif;
@@ -142,42 +149,5 @@
 		font-size: 2.2rem;
 		font-weight: 300;
 		color: $black;
-	}
-}
-/* APPLYING MEDIA QUERIES */
-@media (max-width: 1366px) {
-}
-@media (max-width: 1024px) {
-	.itemDetail {
-		max-width: 80%;
-		.itemDetail-card {
-			flex-direction: column;
-
-			.card-img-container {
-				margin-bottom: 3rem;
-				justify-content: center;
-				padding: 2rem;
-			}
-			.card-info {
-				padding-left: 0;
-				.info-title {
-					font-size: 2.6rem;
-				}
-			}
-			.close {
-				position: absolute;
-				right: 3rem;
-				top: 3rem;
-			}
-		}
-	}
-}
-@media (max-width: 768px) {
-	.itemDetail {
-		max-width: 100%;
-		.itemDetail-card {
-			box-shadow: none;
-			margin: 0;
-		}
 	}
 }

@@ -5,6 +5,12 @@
 
 	.itemDetail {
 		max-width: 63%;
+		@media (max-width: 1024px) {
+			max-width: 80%;
+		}
+		@media (max-width: 576px) {
+			max-width: 100%;
+		}
 		.itemDetail-card {
 			padding: 2rem;
 			margin: 5rem 0;
@@ -12,6 +18,9 @@
 			display: flex;
 			justify-content: flex-start;
 			position: relative;
+			@media (max-width: 576px) {
+				box-shadow: none;
+			}
 			.card-img-container {
 				background-color: $img-bg;
 				display: flex;
@@ -103,11 +112,10 @@
 }
 
 /* APPLYING MEDIA QUERIES */
-@media (max-width: 1366px) {
-}
+
 @media (max-width: 1024px) {
 	.itemDetail {
-		max-width: 80%;
+		// max-width: 80%;
 		.itemDetail-card {
 			flex-direction: column;
 
@@ -115,8 +123,6 @@
 				margin-bottom: 3rem;
 				justify-content: center;
 				padding: 2rem;
-				.img-primary {
-				}
 			}
 			.card-info {
 				padding-left: 0;
@@ -134,7 +140,7 @@
 }
 @media (max-width: 768px) {
 	.itemDetail {
-		max-width: 100%;
+		// max-width: 100%;
 		.itemDetail-card {
 			box-shadow: none;
 			margin: 0;

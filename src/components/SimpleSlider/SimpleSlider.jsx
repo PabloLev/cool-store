@@ -50,7 +50,7 @@ export default class SimpleSlider extends Component {
 						promoData='30% off'
 					/>
 					<Slide
-						infoTitle='New Furniture Collection Trends in 2021'
+						infoTitle='New Furniture Collection in 2021'
 						infoSubtitle='Best Furniture For Your Castle....'
 						infoDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.'
 						promoImg={promo3}

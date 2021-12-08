@@ -59,9 +59,6 @@
 }
 
 i {
-	// display: inline-block;
-	// height: 1.6rem;
-	// width: 1.6rem;
 	display: flex;
 	align-items: center;
 }
@@ -313,6 +310,17 @@ i {
 	justify-content: space-between;
 	align-items: center;
 }
+.flex-start {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.flex-end {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
 //BTN
 .button {
 	font-family: "Josefin Sans", sans-serif;

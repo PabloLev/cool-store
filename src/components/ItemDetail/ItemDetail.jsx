@@ -2,8 +2,13 @@ import "./ItemDetail.scss";
 import ItemCount from "../ItemCount/ItemCount";
 import Rating from "../Rating/Rating";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../Context/cartContext";
 
-function ItemDetail({ item, onAdd, showCount, itemsInCart }) {
+function ItemDetail({ item, onAdd, showCount }) {
+	const { cart } = useContext(CartContext);
+
+	const totalItems = cart.reduce((total, item) => total + item.counter, 0);
 	return (
 		<section className='itemDetail'>
 			<article className='itemDetail-card'>
@@ -64,7 +69,7 @@ function ItemDetail({ item, onAdd, showCount, itemsInCart }) {
 							<div className='mt-6 mb-6'>
 								<Link to='/cart'>
 									<button className='button me-6 mt-3'>
-										To check Out ({itemsInCart})
+										To check Out ({totalItems})
 									</button>
 								</Link>
 								<Link to={`/shop`}>
@@ -79,7 +84,7 @@ function ItemDetail({ item, onAdd, showCount, itemsInCart }) {
 							<h1>Out of stock</h1>
 							<Link to={`/cart`}>
 								<button className='button mt-3 me-6'>
-									To check Out ({itemsInCart})
+									To check Out ({totalItems})
 								</button>
 							</Link>
 							<Link to={`/shop`}>

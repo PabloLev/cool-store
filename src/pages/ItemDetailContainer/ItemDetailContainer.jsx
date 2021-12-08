@@ -8,7 +8,6 @@ import { getDoc, doc } from "firebase/firestore";
 function ItemDetailContainer() {
 	const [itemDetail, setItemDetail] = useState(null);
 	const [showCount, setShowCount] = useState(false);
-	const [itemsInCart, setItemsInCart] = useState(undefined);
 
 	const { itemId } = useParams();
 
@@ -27,7 +26,6 @@ function ItemDetailContainer() {
 
 	const onAdd = (items) => {
 		setShowCount(!showCount);
-		setItemsInCart(items);
 	};
 
 	return (
@@ -38,7 +36,6 @@ function ItemDetailContainer() {
 					item={itemDetail}
 					onAdd={onAdd}
 					showCount={showCount}
-					itemsInCart={itemsInCart}
 				/>
 			) : (
 				<Loader />

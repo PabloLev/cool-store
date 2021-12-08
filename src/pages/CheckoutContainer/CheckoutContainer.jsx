@@ -24,16 +24,20 @@ function CheckoutContainer() {
 
 			{cart.length ? (
 				<>
+					<h1 className='to-right'>Total = ${totalToPay}</h1>
+					<Link
+						to='/cart'
+						className='button mt-6 mb-6 btn-link to-right'
+					>
+						Modify
+					</Link>
 					<h2 className='finish-text'>
 						Please complete the form to finish your purchase.
 					</h2>
-					<BuyerForm finalPurchase={cart} total={totalToPay} />
-					<h1 className='to-right'>Total to pay = ${totalToPay}</h1>
-					<div className='full-width flex-space-between ms-6 me-6'>
-						<Link to='/cart' className='button mt-6 mb-6 btn-link'>
-							Modify
-						</Link>
 
+					<BuyerForm finalPurchase={cart} total={totalToPay} />
+
+					<div className='full-width flex-end ms-6 me-6'>
 						<button
 							type='submit'
 							form='buyerForm'
