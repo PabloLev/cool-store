@@ -2,6 +2,8 @@
 
 https://cool-store.netlify.app/
 
+https://github.com/PabloLev/cool-store/blob/master/public/assets/cool-store.gif?raw=true
+
 ## Node version
 
 node.js v14.18.1
