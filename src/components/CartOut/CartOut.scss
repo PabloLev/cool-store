@@ -23,8 +23,13 @@
 		margin: 0;
 
 		border-bottom: 1px solid $light-grey;
-		height: 8rem;
+		min-height: 8rem;
+		height: auto;
 		width: 100%;
+		@media (max-width: 540px) {
+			flex-direction: column;
+			padding: 2rem 0;
+		}
 
 		.cardImg-Title {
 			display: flex;

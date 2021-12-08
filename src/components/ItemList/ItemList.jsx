@@ -1,7 +1,7 @@
-import Item from '../Item';
-import Loader from '../Loader';
-import './ItemList.scss';
-import { NavLink } from 'react-router-dom';
+import Item from "../Item";
+import Loader from "../Loader";
+import "./ItemList.scss";
+import { NavLink } from "react-router-dom";
 
 function ItemList({ titulo, category, products }) {
 	return (
@@ -9,7 +9,7 @@ function ItemList({ titulo, category, products }) {
 			<h1 className='title'>{titulo}</h1>
 			<nav>
 				<NavLink activeClassName='active' key='all' exact to={`/shop`}>
-					<span className='ms-2 me-2 text-uppercase pointer'>
+					<span className='ms-2 me-2 text-uppercase pointer text-a'>
 						all
 					</span>
 				</NavLink>
@@ -19,7 +19,7 @@ function ItemList({ titulo, category, products }) {
 					exact
 					to={`/category/tech`}
 				>
-					<span className='ms-2 me-2 text-uppercase pointer'>
+					<span className='ms-2 me-2 text-uppercase pointer text-a'>
 						tech
 					</span>
 				</NavLink>
@@ -28,7 +28,7 @@ function ItemList({ titulo, category, products }) {
 					key='home'
 					to={`/category/house`}
 				>
-					<span className='ms-2 me-2 text-uppercase pointer'>
+					<span className='ms-2 me-2 text-uppercase pointer text-a'>
 						house
 					</span>
 				</NavLink>
@@ -37,7 +37,7 @@ function ItemList({ titulo, category, products }) {
 					key='test'
 					to={`/category/test`}
 				>
-					<span className='ms-2 me-2 text-uppercase pointer'>
+					<span className='ms-2 me-2 text-uppercase pointer text-a'>
 						test
 					</span>
 				</NavLink>

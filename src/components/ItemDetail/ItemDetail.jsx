@@ -1,7 +1,7 @@
-// import './ItemDetail.scss';
-import ItemCount from '../ItemCount/ItemCount';
-import Rating from '../Rating/Rating';
-import { Link } from 'react-router-dom';
+import "./ItemDetail.scss";
+import ItemCount from "../ItemCount/ItemCount";
+import Rating from "../Rating/Rating";
+import { Link } from "react-router-dom";
 
 function ItemDetail({ item, onAdd, showCount, itemsInCart }) {
 	return (

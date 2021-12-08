@@ -1,17 +1,21 @@
-@import '../../scss/variables.scss';
+@import "../../scss/variables.scss";
 .footer-links-container {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 5rem;
 	.footer-links-title {
-		font-family: 'Josefin Sans', sans-serif;
+		font-family: "Josefin Sans", sans-serif;
 		margin-bottom: 2rem;
 		font-size: 2.2rem;
 	}
 	.footer-link {
-		font-family: 'Lato', sans-serif;
+		font-family: "Lato", sans-serif;
 		margin-top: 2rem;
 		font-size: 1.6rem;
 		color: #8a8fb9;
+		cursor: pointer;
+		&:hover {
+			color: #4b4e69;
+		}
 	}
 }

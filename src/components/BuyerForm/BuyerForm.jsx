@@ -4,9 +4,11 @@ import { doc, collection, addDoc, updateDoc } from "firebase/firestore";
 import { getFirestore } from "../../firebase/index";
 import { useContext } from "react";
 import { CartContext } from "../../Context/cartContext";
+import { useHistory } from "react-router-dom";
 
 function BuyerForm({ finalPurchase, total }) {
-	const { emptyCart } = useContext(CartContext);
+	const { emptyCart, handleBuyer } = useContext(CartContext);
+	const history = useHistory();
 	const [buyer, setBuyer] = useState({
 		buyerName: "",
 		buyerSurname: "",
@@ -24,7 +26,6 @@ function BuyerForm({ finalPurchase, total }) {
 	};
 
 	const onHandleSubmit = (e) => {
-		console.log(buyer);
 		const db = getFirestore();
 		try {
 			e.preventDefault();
@@ -38,20 +39,27 @@ function BuyerForm({ finalPurchase, total }) {
 			// si están todos los datos del comprador bien
 
 			const orderInfo = collection(db, "orders");
-			addDoc(orderInfo, newOrder).then(({ id }) =>
+			addDoc(orderInfo, newOrder).then(({ id }) => {
+				history.push("/purchased");
+				emptyCart();
+				// const theKey = { key: id };
+				let key = "id";
+				buyer[key] = id;
+
+				handleBuyer(buyer);
+
 				alert(
 					"Thanks for purchase " +
 						buyer.buyerName +
 						"! Your code is: " +
 						id
-				)
-			);
+				);
+			});
 			// actualizar el stock en la base de datos (incomprobable pero prometo que funciona!)
 			finalPurchase.forEach((item) => {
 				const docRef = doc(db, "items", item.id);
 				updateDoc(docRef, { stock: item.stock });
 			});
-			emptyCart();
 		} catch (err) {
 			console.error(err);
 		}

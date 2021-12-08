@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
 	const [cart, setCart] = useState([]);
-	// console.log('cart', cart);
+	const [theBuyer, setTheBuyer] = useState({});
 	const updateItemsInCart = (item, num) => {
 		item.stock = item.stock + num;
 	};
@@ -32,21 +32,27 @@ export const CartProvider = ({ children }) => {
 	};
 
 	const removeItem = (id) => {
-		//Filtro todos los que no coinciden con el id, eliminando el del id correspondiente
-		// const findedItem = cart.find((item) => (item.id = id));
-		// findedItem.stock = findedItem.stock + findedItem.count;
-		// setCart([...cart]);
 		setCart(cart.filter((item) => item.id !== id));
 	};
 
 	const emptyCart = () => {
-		//Vacio el array cart
 		setCart([]);
+	};
+	const handleBuyer = (theBuyer) => {
+		setTheBuyer(theBuyer);
 	};
 
 	return (
 		<CartContext.Provider
-			value={{ cart, addItem, removeItem, emptyCart, updateItemsInCart }}
+			value={{
+				cart,
+				addItem,
+				removeItem,
+				emptyCart,
+				updateItemsInCart,
+				handleBuyer,
+				theBuyer,
+			}}
 		>
 			{children}
 		</CartContext.Provider>

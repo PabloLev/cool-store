@@ -23,21 +23,28 @@
 		margin: 1rem 0 1rem;
 
 		border-bottom: 1px solid $light-grey;
-		height: 12rem;
+		min-height: 12rem;
+		height: auto;
 		width: 100%;
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}
 
 		.cardImg-Title {
 			display: flex;
 			align-items: center;
 
 			.card-img-container {
-				// background-color: $img-bg;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				// padding: 0 5rem;
 				height: 10rem;
 				width: 10rem;
+				@media (max-width: 992px) {
+					height: 5rem;
+					width: 5rem;
+				}
+
 				.img-primary {
 					height: 100%;
 					width: auto;
@@ -46,9 +53,15 @@
 			.info-title {
 				font-family: "Josefin Sans", sans-serif;
 				font-size: 3rem;
+				@media (max-width: 992px) {
+					font-size: 2rem;
+				}
 			}
 			.stock {
 				min-width: 7rem;
+				@media (max-width: 992px) {
+					display: none;
+				}
 			}
 		}
 
@@ -65,6 +78,10 @@
 					font-weight: 400;
 					color: $text1;
 					margin: 0 3rem;
+					min-width: 6rem;
+					@media (max-width: 992px) {
+						margin: 0 1rem;
+					}
 				}
 				.promo-price {
 					color: $primary;
@@ -129,8 +146,10 @@
 			}
 		}
 		.close {
-			// margin-left: 3rem;
 			cursor: pointer;
+			@media (max-width: 992px) {
+				display: flex;
+			}
 
 			i {
 				color: $text1;

@@ -1,5 +1,6 @@
+import "./HeadingBar.scss";
+
 import CartWidget from "../CartWidget/CartWidget";
-// import './HeadingBar.scss';
 import { NavLink } from "react-router-dom";
 
 function HeadingBar() {
@@ -18,26 +19,33 @@ function HeadingBar() {
 						type='checkbox'
 						id='headingbar_toggle'
 					/>
-					<label
-						className='headingbar-hamburger'
-						htmlFor='headingbar_toggle'
-					>
-						<i className='icon-icon-chev-down ms-1'></i>
-					</label>
-					{/* <ul className='heading-navbar'>
-						<li className='heading-navbar-item'>
-							<a className='navbar-link me-2' href='/#'>
-								Login
-								<i className='icon-icon-user ms-1'></i>
-							</a>
-						</li>
-						<li className='heading-navbar-item'>
-							<a className='navbar-link me-2' href='/#'>
-								Wishlist
-								<i className='icon-icon-hart ms-1'></i>
-							</a>
-						</li>
-					</ul> */}
+
+					<div className='social-icon-container flex-row align-items-center me-5'>
+						<a
+							href='https://es-la.facebook.com/'
+							target='_blank'
+							className='social-icon ms-2 me-2'
+							rel='noreferrer'
+						>
+							<span className='icon-icon-facebook'></span>
+						</a>
+						<a
+							href='https://www.instagram.com/?hl=es-la'
+							target='_blank'
+							className='social-icon ms-2 me-2'
+							rel='noreferrer'
+						>
+							<span className='icon-icon-instagram'></span>
+						</a>
+						<a
+							href='https://twitter.com/?lang=es'
+							target='_blank'
+							className='social-icon ms-2 me-2'
+							rel='noreferrer'
+						>
+							<span className='icon-icon-twitter'></span>
+						</a>
+					</div>
 					<NavLink exact to='/cart'>
 						<CartWidget />
 					</NavLink>

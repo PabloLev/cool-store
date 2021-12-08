@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import Rating from '../Rating';
-import './Item.scss';
-import { useContext } from 'react';
-import { CartContext } from '../../Context/cartContext';
+import { Link } from "react-router-dom";
+import Rating from "../Rating";
+import "./Item.scss";
+import { useContext } from "react";
+import { CartContext } from "../../Context/cartContext";
 
 function Item({ item }) {
 	const { addItem, updateItemsInCart } = useContext(CartContext);
@@ -27,15 +27,12 @@ function Item({ item }) {
 							<i className='icon-icon-search-plus'></i>
 						</Link>
 					</div>
-					<div className='icon-container pointer'>
-						<i className='icon-icon-hart'></i>
-					</div>
 				</div>
 			</div>
 			<h3 className='item-title'>{item.name}</h3>
 
-			<Rating />
-			<span className='text-uppercase'>{item.category}</span>
+			<Rating stars={item.rating} />
+			<span className='special-font'>{item.category}</span>
 			<div className='color-icons'>
 				<i className='icon-color icon-yellow'></i>
 				<i className='icon-color icon-pink'></i>

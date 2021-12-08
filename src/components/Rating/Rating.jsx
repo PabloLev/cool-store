@@ -1,28 +1,78 @@
-import './Rating.scss';
+import "./Rating.scss";
 
 function Rating({ stars }) {
-	// let ratingObj = this.props.ratingObj;
+	const handleStars = (stars) => {
+		switch (stars) {
+			case 1:
+				return (
+					<>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star'></i>
+						<i className='icon-icon-star'></i>
+						<i className='icon-icon-star'></i>
+						<i className='icon-icon-star'></i>
+					</>
+				);
 
-	// let stars = [];
+			case 2:
+				return (
+					<>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star'></i>
+						<i className='icon-icon-star'></i>
+						<i className='icon-icon-star'></i>
+					</>
+				);
 
-	// for (var i = 1; i <= 5; i++) {
-	// 	let path = <i class='icon-icon-star star-yellow'></i>;
+			case 3:
+				return (
+					<>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star'></i>
+						<i className='icon-icon-star'></i>
+					</>
+				);
 
-	// 	if (i > ratingObj.ratings) {
-	// 		path = <i class='icon-icon-star'></i>;
-	// 	}
+			case 4:
+				return (
+					<>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star'></i>
+					</>
+				);
 
-	// 	stars.push(<Image style={styles.image} source={path} />);
-	// }
+			case 5:
+				return (
+					<>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star star-yellow'></i>
+						<i className='icon-icon-star star-yellow'></i>
+					</>
+				);
+
+			default:
+				return (
+					<>
+						<i className='icon-icon-star'></i>
+						<i className='icon-icon-star'></i>
+						<i className='icon-icon-star'></i>
+						<i className='icon-icon-star'></i>
+						<i className='icon-icon-star'></i>
+					</>
+				);
+		}
+	};
 
 	return (
-		<div className='stars-container pt-1 pb-3'>
-			<i className='icon-icon-star star-yellow'></i>
-			<i className='icon-icon-star star-yellow'></i>
-			<i className='icon-icon-star star-yellow'></i>
-			<i className='icon-icon-star star-yellow'></i>
-			<i className='icon-icon-star'></i>
-		</div>
+		<div className='stars-container pt-1 pb-3'>{handleStars(stars)}</div>
 	);
 }
 

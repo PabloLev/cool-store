@@ -1,4 +1,4 @@
-// @import '../../scss/variables.scss';
+@import "../../scss/variables.scss";
 .itemDetailContainer {
 	display: flex;
 	justify-content: center;
@@ -23,11 +23,11 @@
 			.card-info {
 				padding-left: 2rem;
 				.info-title {
-					font-family: 'Josefin Sans', sans-serif;
+					font-family: "Josefin Sans", sans-serif;
 					font-size: 3.6rem;
 				}
 				.item-price {
-					font-family: 'Josefin Sans', sans-serif;
+					font-family: "Josefin Sans", sans-serif;
 					font-size: 1.4rem;
 					font-weight: 400;
 					color: $text1;
@@ -43,7 +43,7 @@
 					justify-content: flex-start;
 					align-items: center;
 					span {
-						font-family: 'Josefin Sans', sans-serif;
+						font-family: "Josefin Sans", sans-serif;
 						font-size: 1.6rem;
 						color: #151875;
 					}
@@ -53,7 +53,7 @@
 					}
 				}
 				.info-categories {
-					font-family: 'Josefin Sans', sans-serif;
+					font-family: "Josefin Sans", sans-serif;
 					font-size: 1.6rem;
 					color: #151875;
 				}
@@ -78,12 +78,12 @@
 				}
 				.itemDetail-description {
 					.description-title {
-						font-family: 'Josefin Sans', sans-serif;
+						font-family: "Josefin Sans", sans-serif;
 						font-size: 2.2rem;
 						color: #151875;
 					}
 					.description-text {
-						font-family: 'Josefin Sans', sans-serif;
+						font-family: "Josefin Sans", sans-serif;
 						font-size: 1.6rem;
 						color: #757793;
 					}

@@ -8,6 +8,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import CartContainer from "./pages/CartContainer";
 import CheckoutContainer from "./pages/CheckoutContainer";
 import Contact from "./pages/ContactContainer/ContactContainer";
+import Purchased from "./pages/Purchased/Purchased";
 import Error404 from "./pages/Error404/Error404";
 import { CartProvider } from "./Context/cartContext";
 
@@ -48,6 +49,11 @@ function App() {
 					<Route exact path='/checkout'>
 						<main className='main-container'>
 							<CheckoutContainer />
+						</main>
+					</Route>
+					<Route exact path='/purchased'>
+						<main className='main-container'>
+							<Purchased />
 						</main>
 					</Route>
 					<Route>

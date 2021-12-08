@@ -1,6 +1,6 @@
-// import './Header.scss';
-import HeadingBar from '../HeadingBar/HeadingBar';
-import Navbar from '../Navbar/Navbar';
+import "./Header.scss";
+import HeadingBar from "../HeadingBar/HeadingBar";
+import Navbar from "../Navbar/Navbar";
 
 function Header() {
 	return (

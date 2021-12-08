@@ -29,7 +29,7 @@ function CartContainer() {
 					>
 						Remove All
 					</button>
-					<h1 className='to-right'>Total to pay = ${totalToPay}</h1>
+					<h1 className='to-right'>Total = ${totalToPay}</h1>
 					<div className='full-width flex-space-between ms-6 me-6'>
 						<Link to='/shop' className='button mt-6 mb-6 btn-link'>
 							Continue shopping
