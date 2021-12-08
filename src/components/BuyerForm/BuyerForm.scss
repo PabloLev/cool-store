@@ -1,7 +1,6 @@
 @import "../../scss/variables.scss";
 .form-checkout {
 	display: flex;
-	// flex-direction: column;
 	flex-wrap: wrap;
 	margin: 0 0 2rem;
 	width: 100%;
@@ -42,5 +41,9 @@
 	/* Firefox */
 	input[type="number"] {
 		-moz-appearance: textfield;
+	}
+	input:-webkit-autofill,
+	input:-webkit-autofill:focus {
+		transition: background-color 600000s 0s, color 600000s 0s;
 	}
 }

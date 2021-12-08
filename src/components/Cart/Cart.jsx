@@ -28,7 +28,6 @@ function Cart({ item }) {
 						item={item}
 						showBtn={false}
 					/>
-					{/* <span className='item-price'>x{item.counter} </span> */}
 					<span className='item-price'>
 						${item.price * (1 - item.discount / 100) * item.counter}
 					</span>

@@ -30,7 +30,7 @@ function Footer() {
 					title='Pages'
 					linkList={[
 						{ titulo: "Browse the Shop", url: "/shop" },
-						{ titulo: "Category", url: "/shop" },
+						{ titulo: "Home", url: "/" },
 					]}
 				/>
 			</div>

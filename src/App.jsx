@@ -7,7 +7,6 @@ import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import CartContainer from "./pages/CartContainer";
 import CheckoutContainer from "./pages/CheckoutContainer";
-import Contact from "./pages/ContactContainer/ContactContainer";
 import Purchased from "./pages/Purchased/Purchased";
 import Error404 from "./pages/Error404/Error404";
 import { CartProvider } from "./Context/cartContext";
@@ -36,11 +35,7 @@ function App() {
 							<ItemListContainer gretting='Products' />
 						</main>
 					</Route>
-					<Route exact path='/contact'>
-						<main className='main-container'>
-							<Contact />
-						</main>
-					</Route>
+
 					<Route exact path='/cart'>
 						<main className='main-container'>
 							<CartContainer />

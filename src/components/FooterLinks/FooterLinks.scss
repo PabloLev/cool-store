@@ -3,10 +3,16 @@
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 5rem;
+	@media (max-width: 768px) {
+		margin-bottom: 3rem;
+	}
 	.footer-links-title {
 		font-family: "Josefin Sans", sans-serif;
 		margin-bottom: 2rem;
 		font-size: 2.2rem;
+		@media (max-width: 768px) {
+			margin-bottom: 0rem;
+		}
 	}
 	.footer-link {
 		font-family: "Lato", sans-serif;
@@ -14,6 +20,9 @@
 		font-size: 1.6rem;
 		color: #8a8fb9;
 		cursor: pointer;
+		@media (max-width: 768px) {
+			margin-top: 1, 5rem;
+		}
 		&:hover {
 			color: #4b4e69;
 		}

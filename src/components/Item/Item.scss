@@ -1,4 +1,4 @@
-@import '../../scss/variables.scss';
+@import "../../scss/variables.scss";
 .item {
 	display: flex;
 	flex-direction: column;
@@ -31,11 +31,9 @@
 			align-items: center;
 			text-align: center;
 			position: absolute;
-			font-family: 'Josefin Sans', sans-serif;
+			font-family: "Josefin Sans", sans-serif;
 			font-size: 1.5rem;
-			// line-height: 1.7rem;
 			font-weight: 700;
-			// padding: 1.6rem 4rem;
 			background-color: #00c1fe;
 			color: $white;
 			height: 5rem;
@@ -60,7 +58,6 @@
 				height: 3rem;
 				width: 3rem;
 				border-radius: 50%;
-				// background-color: red;
 				&:hover {
 					background-color: $white;
 				}
@@ -85,7 +82,7 @@
 	}
 
 	.item-title {
-		font-family: 'Josefin Sans', sans-serif;
+		font-family: "Josefin Sans", sans-serif;
 		font-size: 1.8rem;
 		font-weight: 700;
 		color: $text1;
@@ -112,7 +109,7 @@
 		}
 	}
 	.item-price {
-		font-family: 'Josefin Sans', sans-serif;
+		font-family: "Josefin Sans", sans-serif;
 		font-size: 1.4rem;
 		font-weight: 400;
 		color: $text1;

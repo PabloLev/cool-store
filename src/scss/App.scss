@@ -363,10 +363,7 @@ i {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-image: url("https://raw.githubusercontent.com/PabloLev/cool-store/4f0c3472d8421b7994b533fc4bb10e1593259ef5/src/assets/img/error404.svg");
-	background-repeat: no-repeat;
-	background-size: 50%;
-	background-position: center;
+
 	h1 {
 		font-size: 3rem;
 		margin-top: 3rem;
@@ -401,6 +398,9 @@ i {
 	align-items: center;
 	justify-content: center;
 	align-content: center;
+	@media (max-width: 576px) {
+		display: none;
+	}
 }
 .text-a {
 	font-size: 1.25rem;
@@ -430,15 +430,20 @@ i {
 .text-secondary {
 	color: $secondary;
 }
-.purchased-image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+.error-image {
 	background-image: url("https://raw.githubusercontent.com/PabloLev/cool-store/4f0c3472d8421b7994b533fc4bb10e1593259ef5/src/assets/img/error404.svg");
+
 	background-repeat: no-repeat;
-	background-size: 50%;
 	background-position: center;
-	width: 500px;
-	height: 200px;
+	background-size: 50%;
+	width: 90%;
+	padding-bottom: 26%;
+}
+.purchased-image {
+	background-image: url("https://raw.githubusercontent.com/PabloLev/cool-store/30bea53c54b01d1645444683d90cbf96239012c0/src/assets/img/online-shopping-concept.svg");
+	background-repeat: no-repeat;
+	opacity: 0.8;
+	background-position: center;
+	width: 70%;
+	padding-bottom: 26%;
 }

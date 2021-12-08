@@ -1,5 +1,4 @@
 import "./HeadingBar.scss";
-
 import CartWidget from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
 

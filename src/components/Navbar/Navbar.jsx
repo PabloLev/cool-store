@@ -7,11 +7,7 @@ function Navbar() {
 		<nav className='navbar'>
 			<div className='navbar-container'>
 				<div className='navigation'>
-					{/* <!-- LOGO --> */}
-
 					<Logo />
-
-					{/* <!-- NAVIGATION MENU --> */}
 					<ul className='nav-links'>
 						<input
 							className='menu-ckeckbox'
@@ -36,31 +32,9 @@ function Navbar() {
 									Shop
 								</NavLink>
 							</li>
-							{/* <li className='nav-item'>
-								<NavLink
-									activeClassName='active'
-									exact
-									to='/contact'
-								>
-									Contact
-								</NavLink>
-							</li> */}
 						</div>
 					</ul>
 				</div>
-				{/* <div className='search-container'>
-					<form className='search' action=''>
-						<input
-							className='search-input'
-							type='text'
-							placeholder=''
-							name='search'
-						/>
-						<button className='search-btn' type='submit'>
-							<i className='icon-icon-search'></i>
-						</button>
-					</form>
-				</div> */}
 			</div>
 		</nav>
 	);

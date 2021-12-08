@@ -61,7 +61,6 @@
 						background-color: $violet;
 						padding: 0;
 						position: absolute;
-						// display: none;
 						opacity: 0;
 						border-radius: 0.5rem;
 						height: 0;
@@ -82,19 +81,13 @@
 								}
 							}
 						}
-						&:active {
-						}
-						&:hover {
-						}
 					}
 					&:hover .heading-dropdown {
-						// display: block;
 						opacity: 1;
 						padding: 3em 0 1rem;
 						height: auto;
 					}
 					&:active .heading-dropdown {
-						// display: block;
 						opacity: 1;
 						padding: 3em 0 1rem;
 						height: auto;
@@ -151,29 +144,14 @@
 						.navbar-link {
 						}
 						.heading-dropdown {
-							// margin-left: 250%;
-
 							position: relative;
 							width: 100%;
 							background-color: $light-violet;
 							margin-top: 0;
-							// padding-top: 1rem;
 							z-index: 900;
 
 							top: 0;
 							border-radius: 0;
-							li + li {
-							}
-							li {
-								a {
-									&:hover {
-									}
-								}
-							}
-							&:active {
-							}
-							&:hover {
-							}
 						}
 						&:hover .heading-dropdown {
 							padding-top: 1rem;

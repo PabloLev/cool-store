@@ -1,9 +1,12 @@
-@import '../../scss/variables.scss';
+@import "../../scss/variables.scss";
 
 .logo {
 	margin-right: 9rem;
+	@media (max-width: 768px) {
+		margin-bottom: 2rem;
+	}
 	a {
-		font-family: 'Josefin Sans', sans-serif;
+		font-family: "Josefin Sans", sans-serif;
 		font-size: 3.4rem;
 		font-weight: 700;
 		color: $black;

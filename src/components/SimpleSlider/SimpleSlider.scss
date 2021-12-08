@@ -1,4 +1,4 @@
-@import '../../scss/variables.scss';
+@import "../../scss/variables.scss";
 
 .slick-slider {
 	.slick-arrow {
@@ -22,17 +22,12 @@
 			color: $violet;
 		}
 	}
-	.slick-list {
-		.slick-track {
-			.slick-slide {
-			}
-		}
-	}
+
 	.slick-dots {
 		bottom: 5rem;
 		button {
 			&:before {
-				content: '';
+				content: "";
 				height: 1rem;
 				width: 1rem;
 				background-color: transparent;
@@ -44,7 +39,7 @@
 		.slick-active {
 			button {
 				&:before {
-					content: '';
+					content: "";
 					height: 1rem;
 					width: 1rem;
 					background-color: $primary;
@@ -57,44 +52,10 @@
 	}
 }
 /* APPLYING MEDIA QUERIES */
-// @media (max-width: 1366px) {
-// 	.itemListContainer {
-// 		grid-template-columns: 1fr 1fr 1fr;
-// 		width: 80%;
-// 	}
-// }
 @media (max-width: 1024px) {
 	.slick-slider {
 		.slick-arrow {
 			display: none;
 		}
-		.slick-prev {
-			&:before {
-			}
-		}
-		.slick-next {
-			&:before {
-			}
-		}
-		.slick-list {
-			.slick-track {
-				.slick-slide {
-				}
-			}
-		}
-		.slick-dots {
-			button {
-				&:before {
-				}
-			}
-			.slick-active {
-				button {
-					&:before {
-					}
-				}
-			}
-		}
 	}
-}
-@media (max-width: 768px) {
 }

@@ -33,14 +33,7 @@ function CheckoutContainer() {
 						<Link to='/cart' className='button mt-6 mb-6 btn-link'>
 							Modify
 						</Link>
-						{/* <Link
-							to='/checkout'
-							type='submit'
-							form='buyerForm'
-							className='button mt-6 mb-6'
-						>
-							Finish
-						</Link> */}
+
 						<button
 							type='submit'
 							form='buyerForm'

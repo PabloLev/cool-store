@@ -36,13 +36,10 @@ function BuyerForm({ finalPurchase, total }) {
 				total,
 			};
 
-			// si están todos los datos del comprador bien
-
 			const orderInfo = collection(db, "orders");
 			addDoc(orderInfo, newOrder).then(({ id }) => {
 				history.push("/purchased");
 				emptyCart();
-				// const theKey = { key: id };
 				let key = "id";
 				buyer[key] = id;
 
@@ -55,7 +52,6 @@ function BuyerForm({ finalPurchase, total }) {
 						id
 				);
 			});
-			// actualizar el stock en la base de datos (incomprobable pero prometo que funciona!)
 			finalPurchase.forEach((item) => {
 				const docRef = doc(db, "items", item.id);
 				updateDoc(docRef, { stock: item.stock });
