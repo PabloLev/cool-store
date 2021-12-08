@@ -42,15 +42,7 @@ function BuyerForm({ finalPurchase, total }) {
 				emptyCart();
 				let key = "id";
 				buyer[key] = id;
-
 				handleBuyer(buyer);
-
-				alert(
-					"Thanks for purchase " +
-						buyer.buyerName +
-						"! Your code is: " +
-						id
-				);
 			});
 			finalPurchase.forEach((item) => {
 				const docRef = doc(db, "items", item.id);
