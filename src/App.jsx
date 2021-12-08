@@ -8,6 +8,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import CartContainer from "./pages/CartContainer";
 import CheckoutContainer from "./pages/CheckoutContainer";
 import Contact from "./pages/ContactContainer/ContactContainer";
+import Error404 from "./pages/Error404/Error404";
 import { CartProvider } from "./Context/cartContext";
 
 function App() {
@@ -50,7 +51,7 @@ function App() {
 						</main>
 					</Route>
 					<Route>
-						<h1>Página no encontrada</h1>
+						<Error404 />
 					</Route>
 				</Switch>
 				<Footer />

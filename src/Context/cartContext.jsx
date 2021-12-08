@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useState } from "react";
 
 export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
@@ -9,6 +9,7 @@ export const CartProvider = ({ children }) => {
 	};
 	const addItem = (item, quantity) => {
 		const isInCart = cart.some((product) => product.id === item.id);
+		const newCart = [...cart];
 		if (item.stock >= 0) {
 			if (!isInCart) {
 				item.stock = item.stock - quantity;
@@ -18,14 +19,14 @@ export const CartProvider = ({ children }) => {
 					counter: quantity,
 				};
 
-				setCart([...cart, newItem]);
+				setCart([...newCart, newItem]);
 			} else {
-				const foundedItem = cart.find(
+				const foundedItem = newCart.find(
 					(product) => product.id === item.id
 				);
 				foundedItem.counter = foundedItem.counter + quantity;
 				foundedItem.stock = foundedItem.stock - quantity;
-				setCart([...cart]);
+				setCart([...newCart]);
 			}
 		}
 	};

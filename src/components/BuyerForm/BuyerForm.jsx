@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { CartContext } from "../../Context/cartContext";
 
 function BuyerForm({ finalPurchase, total }) {
-	const { removeItem } = useContext(CartContext);
+	const { emptyCart } = useContext(CartContext);
 	const [buyer, setBuyer] = useState({
 		buyerName: "",
 		buyerSurname: "",
@@ -49,9 +49,9 @@ function BuyerForm({ finalPurchase, total }) {
 			// actualizar el stock en la base de datos (incomprobable pero prometo que funciona!)
 			finalPurchase.forEach((item) => {
 				const docRef = doc(db, "items", item.id);
-				updateDoc(docRef, { stock: item.stock - item.quantity });
+				updateDoc(docRef, { stock: item.stock });
 			});
-			removeItem();
+			emptyCart();
 		} catch (err) {
 			console.error(err);
 		}
@@ -89,7 +89,6 @@ function BuyerForm({ finalPurchase, total }) {
 				placeholder='Email*'
 				required
 			/>
-
 			<input
 				name='buyerCity'
 				className='line-input half'
@@ -115,11 +114,6 @@ function BuyerForm({ finalPurchase, total }) {
 				placeholder='Adress*'
 				required
 			/>
-			<div className='cart-btn mt-100'>
-				{/* <button type='submit' className='button mt-6 mb-6'>
-					Finish
-				</button> */}
-			</div>
 		</form>
 	);
 }
